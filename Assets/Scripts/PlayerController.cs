@@ -1,25 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-    //Unity defined variables
-    public float jumpForce;
-    public bool grounded;
-    public LayerMask whatIsGround;
+    private static readonly int MAX_RACCOONS = 10;
 
-    private static GameObject selectedRacoonGameObject;
-    private Collider2D myCollider;
+    private static List<GameObject> aliveRaccoonGameObjects = new List<GameObject>();
+    private static int selectedIndex = 0;
     
     void Start () {
-        selectedRacoonGameObject = RacoonSelector.Select(0);
-        print(selectedRacoonGameObject);
-        myCollider = GetComponent<Collider2D>();
+        aliveRaccoonGameObjects = InitRaccoons();
 	}
 	
 	void Update () {
-        grounded = Physics2D.IsTouchingLayers(myCollider, whatIsGround);
         ListenControls();
 	}
     
@@ -29,19 +24,77 @@ public class PlayerController : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Rigidbody2D rigidbody2D = selectedRacoonGameObject.GetComponent<Rigidbody2D>();
-                rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpForce*RacoonSelector.GetTopStack());
+                Jump();
             }
             else if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                selectedRacoonGameObject = RacoonSelector.SelectUp();
-                print(selectedRacoonGameObject);
+                SelectUp();
             }
             else if (Input.GetKeyDown(KeyCode.DownArrow))
             {
-                selectedRacoonGameObject = RacoonSelector.SelectDown();
-                print(selectedRacoonGameObject);
+                SelectDown();
             }
         }
+    }
+
+    private void Jump()
+    {
+        // If the selected raccoon is grounded, then make all the raccoon on top of it jump
+        //if(aliveRaccoonGameObjects[selectedIndex].GetComponent<RaccoonAction>().grounded)
+        //{
+            for (int i = selectedIndex; i < aliveRaccoonGameObjects.Count; i++)
+            {
+                aliveRaccoonGameObjects[i].GetComponent<RaccoonAction>().Jump();
+            }
+        //}
+    }
+
+    private void SelectUp()
+    {
+        if (selectedIndex < aliveRaccoonGameObjects.Count - 1)
+            selectedIndex++;
+
+        print("Current Index: " + selectedIndex);
+    }
+
+    private void SelectDown()
+    {
+        if (selectedIndex > 0)
+            selectedIndex--;
+
+        print("Current Index: " + selectedIndex);
+    }
+
+    private void Select(int index)
+    {
+        if (index >= aliveRaccoonGameObjects.Count)
+        {
+            print("Error when selecting racoon: index out of bounds");
+            return;
+        }
+        selectedIndex = index;
+        print("Current Index: " + selectedIndex);
+    }
+
+    private List<GameObject> InitRaccoons()
+    {
+        List<GameObject> aliveRaccoonGameObjects = new List<GameObject>();
+
+        aliveRaccoonGameObjects.Clear();
+
+        aliveRaccoonGameObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("Player"));
+        aliveRaccoonGameObjects = aliveRaccoonGameObjects.OrderBy(o => o.name).ToList();
+
+        print("Raccoon Selector Initialization " +
+            (aliveRaccoonGameObjects.Count == MAX_RACCOONS ?
+                "Successful" :
+                "Failed\nCount: " + aliveRaccoonGameObjects.Count));
+
+        return aliveRaccoonGameObjects;
+    }
+
+    private void AddRaccoon(GameObject raccoonGameObject)
+    {
+        aliveRaccoonGameObjects.Add(raccoonGameObject);
     }
 }

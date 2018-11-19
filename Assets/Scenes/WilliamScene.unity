@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 243573809}
   - component: {fileID: 243573810}
   - component: {fileID: 243573811}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +205,8 @@ GameObject:
   - component: {fileID: 265159019}
   - component: {fileID: 265159018}
   - component: {fileID: 265159022}
-  m_Layer: 9
+  - component: {fileID: 265159023}
+  m_Layer: 8
   m_Name: raccoonproto (8)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -340,6 +341,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
+--- !u!114 &265159023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 265159016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cd243ec1b48f5643850e3577d807133, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 5
+  grounded: 0
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &289059594
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,7 +366,7 @@ GameObject:
   m_Component:
   - component: {fileID: 289059595}
   - component: {fileID: 289059596}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spritesheet_ground_7 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -428,7 +445,8 @@ GameObject:
   - component: {fileID: 325289006}
   - component: {fileID: 325289005}
   - component: {fileID: 325289009}
-  m_Layer: 9
+  - component: {fileID: 325289010}
+  m_Layer: 8
   m_Name: raccoonproto (2)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -563,6 +581,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
+--- !u!114 &325289010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 325289003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cd243ec1b48f5643850e3577d807133, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 5
+  grounded: 0
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &341301848
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,7 +605,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 341301849}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -603,7 +637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 467837380}
   - component: {fileID: 467837381}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spritesheet_ground_7 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -679,7 +713,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -757,7 +791,7 @@ GameObject:
   m_Component:
   - component: {fileID: 520108599}
   - component: {fileID: 520108600}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spritesheet_ground_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -862,6 +896,38 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1154927694235162, guid: 146281e0fa982984a9b7793226321b0c, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197958901427576, guid: 146281e0fa982984a9b7793226321b0c, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002915799592672, guid: 146281e0fa982984a9b7793226321b0c, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1370536300804916, guid: 146281e0fa982984a9b7793226321b0c, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439128586184342, guid: 146281e0fa982984a9b7793226321b0c, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972442082951352, guid: 146281e0fa982984a9b7793226321b0c, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752721856433576, guid: 146281e0fa982984a9b7793226321b0c, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1177425549648322, guid: 146281e0fa982984a9b7793226321b0c, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 146281e0fa982984a9b7793226321b0c, type: 2}
   m_IsPrefabAsset: 0
@@ -874,7 +940,7 @@ GameObject:
   m_Component:
   - component: {fileID: 593545949}
   - component: {fileID: 593545950}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spritesheet_ground_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -953,7 +1019,8 @@ GameObject:
   - component: {fileID: 684044308}
   - component: {fileID: 684044307}
   - component: {fileID: 684044311}
-  m_Layer: 9
+  - component: {fileID: 684044312}
+  m_Layer: 8
   m_Name: raccoonproto (1)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1088,6 +1155,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
+--- !u!114 &684044312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 684044305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cd243ec1b48f5643850e3577d807133, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 5
+  grounded: 0
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1001 &719966749
 Prefab:
   m_ObjectHideFlags: 0
@@ -1138,7 +1221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 745117121}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlatformGenerationPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1171,7 +1254,8 @@ GameObject:
   - component: {fileID: 755160048}
   - component: {fileID: 755160047}
   - component: {fileID: 755160051}
-  m_Layer: 9
+  - component: {fileID: 755160052}
+  m_Layer: 8
   m_Name: raccoonproto (5)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1306,6 +1390,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
+--- !u!114 &755160052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 755160045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cd243ec1b48f5643850e3577d807133, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 5
+  grounded: 0
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &823940030
 GameObject:
   m_ObjectHideFlags: 0
@@ -1319,7 +1419,8 @@ GameObject:
   - component: {fileID: 823940033}
   - component: {fileID: 823940032}
   - component: {fileID: 823940036}
-  m_Layer: 9
+  - component: {fileID: 823940037}
+  m_Layer: 8
   m_Name: raccoonproto (3)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1454,6 +1555,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
+--- !u!114 &823940037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 823940030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cd243ec1b48f5643850e3577d807133, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 5
+  grounded: 0
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &835532984
 GameObject:
   m_ObjectHideFlags: 0
@@ -1463,7 +1580,7 @@ GameObject:
   m_Component:
   - component: {fileID: 835532985}
   - component: {fileID: 835532986}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spritesheet_ground_7 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1539,7 +1656,7 @@ GameObject:
   - component: {fileID: 892159858}
   - component: {fileID: 892159859}
   - component: {fileID: 892159860}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1611,7 +1728,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 986229322}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlatformDestructionPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1640,7 +1757,7 @@ GameObject:
   m_Component:
   - component: {fileID: 995034467}
   - component: {fileID: 995034468}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spritesheet_ground_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1715,7 +1832,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1028865019}
   - component: {fileID: 1028865020}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spritesheet_ground_7 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1839,7 +1956,8 @@ GameObject:
   - component: {fileID: 1144835117}
   - component: {fileID: 1144835116}
   - component: {fileID: 1144835120}
-  m_Layer: 9
+  - component: {fileID: 1144835121}
+  m_Layer: 8
   m_Name: raccoonproto (6)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1974,6 +2092,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
+--- !u!114 &1144835121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1144835114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cd243ec1b48f5643850e3577d807133, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 5
+  grounded: 0
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1194821302
 GameObject:
   m_ObjectHideFlags: 0
@@ -1983,7 +2117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1194821303}
   - component: {fileID: 1194821304}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spritesheet_ground_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2064,7 +2198,8 @@ GameObject:
   - component: {fileID: 1203418708}
   - component: {fileID: 1203418710}
   - component: {fileID: 1203418709}
-  m_Layer: 9
+  - component: {fileID: 1203418711}
+  m_Layer: 8
   m_Name: raccoonproto
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2210,11 +2345,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad64495c34f901d408222dd56fae9aca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 5
-  grounded: 0
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!114 &1203418710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2226,6 +2356,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98bd259bb462e8847acc3966a03d3f9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1203418711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1203418702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cd243ec1b48f5643850e3577d807133, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 5
+  grounded: 0
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1316186259
 GameObject:
   m_ObjectHideFlags: 0
@@ -2235,7 +2381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1316186260}
   - component: {fileID: 1316186261}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spritesheet_ground_7 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2310,7 +2456,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1322546517}
   - component: {fileID: 1322546518}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spritesheet_ground_7 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2385,7 +2531,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1376384166}
   - component: {fileID: 1376384167}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AllCoons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2432,7 +2578,8 @@ GameObject:
   - component: {fileID: 1379422823}
   - component: {fileID: 1379422822}
   - component: {fileID: 1379422826}
-  m_Layer: 9
+  - component: {fileID: 1379422827}
+  m_Layer: 8
   m_Name: raccoonproto (4)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2567,6 +2714,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
+--- !u!114 &1379422827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1379422820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cd243ec1b48f5643850e3577d807133, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 5
+  grounded: 0
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1386076206
 GameObject:
   m_ObjectHideFlags: 0
@@ -2576,7 +2739,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1386076207}
   - component: {fileID: 1386076208}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spritesheet_ground_7 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2771,7 +2934,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1491115317}
   - component: {fileID: 1491115318}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spritesheet_ground_7 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2846,7 +3009,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1533442112}
   - component: {fileID: 1533442113}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spritesheet_ground_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2921,7 +3084,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1663035714}
   - component: {fileID: 1663035715}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spritesheet_ground_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3101,7 +3264,8 @@ GameObject:
   - component: {fileID: 1776374980}
   - component: {fileID: 1776374979}
   - component: {fileID: 1776374983}
-  m_Layer: 9
+  - component: {fileID: 1776374984}
+  m_Layer: 8
   m_Name: raccoonproto (7)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3236,6 +3400,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
+--- !u!114 &1776374984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1776374977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cd243ec1b48f5643850e3577d807133, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 5
+  grounded: 0
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1934839952
 GameObject:
   m_ObjectHideFlags: 0
@@ -3249,7 +3429,8 @@ GameObject:
   - component: {fileID: 1934839955}
   - component: {fileID: 1934839954}
   - component: {fileID: 1934839958}
-  m_Layer: 9
+  - component: {fileID: 1934839959}
+  m_Layer: 8
   m_Name: raccoonproto (9)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3383,3 +3564,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
+--- !u!114 &1934839959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1934839952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cd243ec1b48f5643850e3577d807133, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 5
+  grounded: 0
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
