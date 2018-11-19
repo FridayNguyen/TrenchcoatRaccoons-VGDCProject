@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/Scenes/WilliamScene.unity
-  isLoaded: 1
-  isActive: 1
