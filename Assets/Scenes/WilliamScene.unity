@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 265159018}
   - component: {fileID: 265159022}
   - component: {fileID: 265159023}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: raccoonproto (8)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -446,7 +446,7 @@ GameObject:
   - component: {fileID: 325289005}
   - component: {fileID: 325289009}
   - component: {fileID: 325289010}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: raccoonproto (2)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1020,7 +1020,7 @@ GameObject:
   - component: {fileID: 684044307}
   - component: {fileID: 684044311}
   - component: {fileID: 684044312}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: raccoonproto (1)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1255,7 +1255,7 @@ GameObject:
   - component: {fileID: 755160047}
   - component: {fileID: 755160051}
   - component: {fileID: 755160052}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: raccoonproto (5)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1420,7 +1420,7 @@ GameObject:
   - component: {fileID: 823940032}
   - component: {fileID: 823940036}
   - component: {fileID: 823940037}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: raccoonproto (3)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1957,7 +1957,7 @@ GameObject:
   - component: {fileID: 1144835116}
   - component: {fileID: 1144835120}
   - component: {fileID: 1144835121}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: raccoonproto (6)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2198,7 +2198,7 @@ GameObject:
   - component: {fileID: 1203418708}
   - component: {fileID: 1203418709}
   - component: {fileID: 1203418711}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: raccoonproto
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2567,7 +2567,7 @@ GameObject:
   - component: {fileID: 1379422822}
   - component: {fileID: 1379422826}
   - component: {fileID: 1379422827}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: raccoonproto (4)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2822,13 +2822,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d10e7b33142484db2aa8ed976d153e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chargeSpeed: 2
+  chargeSpeed: 10
   hoverSpeed: 1
+  hoverVerticalLength: 0.5
   playerRange: 8
   playerLayer:
     serializedVersion: 2
     m_Bits: 512
   playerInRange: 0
+  isCharging: 0
 --- !u!212 &1400561510
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2882,7 +2884,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1400561508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.52, y: 2.31, z: 0}
+  m_LocalPosition: {x: 14.75, y: 1.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3253,7 +3255,7 @@ GameObject:
   - component: {fileID: 1776374979}
   - component: {fileID: 1776374983}
   - component: {fileID: 1776374984}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: raccoonproto (7)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3418,7 +3420,7 @@ GameObject:
   - component: {fileID: 1934839954}
   - component: {fileID: 1934839958}
   - component: {fileID: 1934839959}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: raccoonproto (9)
   m_TagString: Player
   m_Icon: {fileID: 0}

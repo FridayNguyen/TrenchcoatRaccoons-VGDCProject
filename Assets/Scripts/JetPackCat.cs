@@ -2,13 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JetPackCat : MonoBehaviour {
+public class JetPackCat : MonoBehaviour
+{
 
     private PlayerController thePlayer;
+
+    private Vector3 originalPosition;
 
     public float chargeSpeed;
 
     public float hoverSpeed;
+
+    public float hoverVerticalLength;
 
     public float playerRange;
 
@@ -16,51 +21,52 @@ public class JetPackCat : MonoBehaviour {
 
     public bool playerInRange;
 
-	// Use this for initialization
-	void Start () {
+    public bool isCharging;
+
+    private bool hoverUp;
+
+    // Use this for initialization
+    void Start()
+    {
         thePlayer = FindObjectOfType<PlayerController>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        originalPosition = transform.position;
+        isCharging = false;
+        hoverUp = true;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         playerInRange = Physics2D.OverlapCircle(transform.position, playerRange, playerLayer);
 
         //Charge player when in range
         if (playerInRange)
         {
-            transform.position = Vector3.MoveTowards(transform.position, thePlayer.transform.position, chargeSpeed * Time.deltaTime);
+            isCharging = true;
+            transform.Translate(Vector2.left * chargeSpeed * Time.deltaTime);
         }
         //Not in range, so random movements
-        /*else
+        else
         {
-            int moveXorY = Random.Range(0, 4);
-            //If random is 1, then move X
-            if (moveXorY != 1)
+            if ((transform.position.y < (originalPosition.y + hoverVerticalLength)) && hoverUp)
             {
-                int moveUporDown = Random.Range(0, 2);
-                if (moveUporDown == 1)
-                {
-                    // Move the object upward in world space 1 unit/second.
-                    transform.Translate(Vector3.up * Time.deltaTime, Space.World);
-                }
-                else{ transform.Translate(Vector3.down * Time.deltaTime, Space.World); }
-                
+                transform.Translate(Vector2.up * Time.deltaTime);
             }
             else
             {
-                int moveLeftorRight = Random.Range(0, 2);
-                if (moveLeftorRight == 1)
+                hoverUp = false;
+                transform.Translate(Vector2.down * Time.deltaTime);
+                if (transform.position.y < (originalPosition.y - hoverVerticalLength))
                 {
-                    // Move the object left in world space 1 unit/second.
-                    transform.Translate(Vector3.left * Time.deltaTime, Space.World);
+                    hoverUp = true;
                 }
-                else { transform.Translate(Vector3.right * Time.deltaTime, Space.World); }
             }
-
-        }*/
+        }
+        isCharging = false;
     }
 
-    void OnDrawGizmosSelected() {
+    void OnDrawGizmosSelected()
+    {
         Gizmos.DrawSphere(transform.position, playerRange);
     }
 
