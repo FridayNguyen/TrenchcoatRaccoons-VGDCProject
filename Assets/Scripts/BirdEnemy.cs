@@ -13,11 +13,18 @@ public class BirdEnemy : MonoBehaviour {
     [SerializeField]
     public float magnitude;
 
+    //Player Variables
+    private PlayerController thePlayer;
+    public float playerRange;
+    public bool playerInRange;
+    public LayerMask playerLayer;
+
     Vector3 pos, localScale;
 
     // Use this for initialization
     void Start()
     {
+        thePlayer = FindObjectOfType<PlayerController>();
         pos = transform.position;
         localScale = transform.localScale;
     }
@@ -25,7 +32,17 @@ public class BirdEnemy : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        MoveLeft();
+        playerInRange = Physics2D.OverlapCircle(transform.position, playerRange, playerLayer);
+
+        if (playerInRange)
+        {
+            MoveLeft();
+        }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawSphere(transform.position, playerRange);
     }
 
     void MoveLeft()
