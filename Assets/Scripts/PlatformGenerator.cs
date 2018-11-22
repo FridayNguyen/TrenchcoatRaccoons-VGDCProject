@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class PlatformGenerator : MonoBehaviour
 {
-
+    //Platform Generation
     public GameObject thePlatform;
     public GameObject theFloatingPlatform;
     public Transform generationPoint;
 
     private float platformWidth;
 
+    //Enenmy Generation
+    private EnenmyGenerator theEnenmyGenerator;
+
     // Use this for initialization
     void Start()
     {
         platformWidth = thePlatform.GetComponent<BoxCollider2D>().size.x;
+        theEnenmyGenerator = FindObjectOfType<EnenmyGenerator>();
     }
 
     // Update is called once per frame
@@ -24,7 +28,7 @@ public class PlatformGenerator : MonoBehaviour
         {   
             //Variables
             float distanceBetweenChance = Random.Range(0, 4);
-            float floatingPlatform = Random.Range(0, 2);
+            float floatingPlatform = Random.Range(0, 5);
             int distanceBetween = 0;
 
             //One out of four chance will there be a hole in the floor
@@ -41,9 +45,18 @@ public class PlatformGenerator : MonoBehaviour
             if (floatingPlatform != 0)
             {
                 int randomHeight = Random.Range(3, 8);
-                int randomWidth = Random.Range(2,4);
+                int randomWidth = Random.Range(4, 8);
                 Vector3 tempPosition = new Vector3(transform.position.x + theFloatingPlatform.GetComponent<BoxCollider2D>().size.x + randomWidth, transform.position.y + randomHeight, transform.position.z);
-                Instantiate(theFloatingPlatform, tempPosition, transform.rotation);
+                //50%50 chance an enenmy will spawn or a floating platform will spawn
+                int randomChance = Random.Range(0, 2);
+                if (randomChance == 1)
+                {
+                    Instantiate(theFloatingPlatform, tempPosition, transform.rotation);
+                }
+                else
+                {
+                    theEnenmyGenerator.SpawnEnenmy(tempPosition);
+                }
             }
         }
     }

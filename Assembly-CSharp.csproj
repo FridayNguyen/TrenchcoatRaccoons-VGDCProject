@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BirdEnemy.cs" />
+     <Compile Include="Assets\Scripts\EnenmyGenerator.cs" />
      <Compile Include="Assets\Scripts\ForwardChildren.cs" />
      <Compile Include="Assets\Scripts\ForwardMaster.cs" />
      <Compile Include="Assets\Scripts\JetPackCat.cs" />
