@@ -34,6 +34,10 @@ public class PlayerController : MonoBehaviour {
             {
                 SelectDown();
             }
+            else if (Input.GetKeyDown(KeyCode.X))
+            {
+                Shoot();
+            }
         }
     }
 
@@ -63,6 +67,11 @@ public class PlayerController : MonoBehaviour {
             selectedIndex--;
 
         print("Current Index: " + selectedIndex);
+    }
+
+    private void Shoot()
+    {
+        aliveRaccoonGameObjects[selectedIndex].GetComponent<pickup_detector>().Shoot();
     }
 
     private void Select(int index)

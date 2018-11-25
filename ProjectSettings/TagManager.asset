@@ -6,6 +6,7 @@ TagManager:
   tags:
   - pickup
   - racoon
+  - bullet
   layers:
   - Default
   - TransparentFX
