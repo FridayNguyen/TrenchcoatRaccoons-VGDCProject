@@ -7,6 +7,10 @@ TagManager:
   - pickup
   - racoon
   - bullet
+  - enemy
+  - toptrigger
+  - bottrigger
+  - gunpickup
   layers:
   - Default
   - TransparentFX

@@ -7,8 +7,8 @@ public class PlayerController : MonoBehaviour {
 
     private static readonly int MAX_RACCOONS = 10;
 
-    private static List<GameObject> aliveRaccoonGameObjects = new List<GameObject>();
-    private static int selectedIndex = 0;
+    public List<GameObject> aliveRaccoonGameObjects = new List<GameObject>(); //remove static qualifier
+    public int selectedIndex = 0; //remove private static
     
     void Start () {
         aliveRaccoonGameObjects = InitRaccoons();
@@ -42,15 +42,25 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void Jump()
-    {
-        // If the selected raccoon is grounded, then make all the raccoon on top of it jump
-        //if(aliveRaccoonGameObjects[selectedIndex].GetComponent<RaccoonAction>().grounded)
-        //{
-            for (int i = selectedIndex; i < aliveRaccoonGameObjects.Count; i++)
+    {     
+        for (int i = selectedIndex; i < aliveRaccoonGameObjects.Count; i++)
+        {
+            if (aliveRaccoonGameObjects[i].GetComponent<RaccoonAction>().grounded || aliveRaccoonGameObjects[i].GetComponent<RaccoonAction>().hasCoonBelow)
             {
                 aliveRaccoonGameObjects[i].GetComponent<RaccoonAction>().Jump();
             }
-        //}
+        }  
+    }
+
+    private void UpdateCoonVar()
+    {
+        if (aliveRaccoonGameObjects.Count != 0)
+        {
+            for (int i = 0; i < aliveRaccoonGameObjects.Count; i++)
+            {
+                aliveRaccoonGameObjects[i].GetComponent<RaccoonAction>().coonIndex = i;                
+            }
+        }
     }
 
     private void SelectUp()

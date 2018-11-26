@@ -13,7 +13,7 @@ public class PlatformDestroyer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (transform.position.x < platformDestructionPoint.transform.position.x)
+        if (transform.position.x < platformDestructionPoint.transform.position.x || transform.position.y < platformDestructionPoint.transform.position.y)
         {
             Destroy(gameObject);
         }

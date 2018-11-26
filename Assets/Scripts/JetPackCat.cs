@@ -41,7 +41,8 @@ public class JetPackCat : MonoBehaviour
         if (playerInRange)
         {
             isCharging = true;
-            transform.Translate(Vector2.left * chargeSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.Euler(0, 0, 45);
+            transform.Translate(Vector2.left * chargeSpeed * Time.deltaTime, Space.World);
         }
         //Not in range, so random movements
         else

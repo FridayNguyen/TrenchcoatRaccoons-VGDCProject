@@ -1,7 +1,21 @@
 fileFormatVersion: 2
 guid: cfbe3cc7b52d13a4198477dc8f678637
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: OpenBotCoon_0
+    21300002: OpenBotCoon_1
+    21300004: OpenBotCoon_2
+    21300006: OpenBotCoon_3
+    21300008: OpenBotCoon_4
+    21300010: OpenBotCoon_5
+    21300012: OpenBotCoon_6
+    21300014: OpenBotCoon_7
+    21300016: OpenBotCoon_8
+    21300018: OpenBotCoon_9
+    21300020: OpenBotCoon_10
+    21300022: OpenBotCoon_11
+    21300024: OpenBotCoon_12
+    21300026: OpenBotCoon_13
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -31,7 +45,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,12 +54,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -60,10 +74,21 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -71,7 +96,127 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: OpenBotCoon_0
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 2206
+        width: 771
+        height: 933
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a7ed2c013941143bd411c40d82fab5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpenBotCoon_2
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 2206
+        width: 546
+        height: 922
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9470ce89fe56104da17ec923459aeba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpenBotCoon_3
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 1132
+        width: 546
+        height: 897
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a55019dfb97e24d88579f33bf66d32
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpenBotCoon_5
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 1146
+        width: 612
+        height: 872
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a61e9754ff1ff94ca54603f7b07f31c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpenBotCoon_11
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 61
+        width: 757
+        height: 894
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc136825b3213c34591c930f5c79d772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpenBotCoon_12
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 61
+        width: 892
+        height: 875
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfae8f487f6e540498aa72444fe9f448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

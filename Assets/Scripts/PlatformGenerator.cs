@@ -27,14 +27,14 @@ public class PlatformGenerator : MonoBehaviour
         if (transform.position.x < generationPoint.position.x)
         {   
             //Variables
-            float distanceBetweenChance = Random.Range(0, 4);
-            float floatingPlatform = Random.Range(0, 5);
+            float distanceBetweenChance = Random.Range(0, 3);
+            float floatingPlatform = Random.Range(0, 10);
             int distanceBetween = 0;
 
-            //One out of four chance will there be a hole in the floor
+            //One out of 2 chance will there be a hole in the floor
             if (distanceBetweenChance == 0)
             {
-                distanceBetween = 1;
+                distanceBetween = 2;
             }
 
             //Floor Platform, distancebetween will vary due to random distance chance
@@ -46,7 +46,7 @@ public class PlatformGenerator : MonoBehaviour
             {
                 int randomHeight = Random.Range(3, 8);
                 int randomWidth = Random.Range(4, 8);
-                Vector3 tempPosition = new Vector3(transform.position.x + theFloatingPlatform.GetComponent<BoxCollider2D>().size.x + randomWidth, transform.position.y + randomHeight, transform.position.z);
+                Vector3 tempPosition = new Vector3(transform.position.x + (theFloatingPlatform.GetComponent<BoxCollider2D>().size.x * 2) + randomWidth, transform.position.y + randomHeight, transform.position.z);
                 //50%50 chance an enenmy will spawn or a floating platform will spawn
                 int randomChance = Random.Range(0, 2);
                 if (randomChance == 1)
