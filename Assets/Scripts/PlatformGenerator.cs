@@ -7,6 +7,8 @@ public class PlatformGenerator : MonoBehaviour
     //Platform Generation
     public GameObject thePlatform;
     public GameObject theFloatingPlatform;
+    public GameObject cat;
+    public GameObject bird;
     public Transform generationPoint;
 
     private float platformWidth;
@@ -46,15 +48,16 @@ public class PlatformGenerator : MonoBehaviour
             {
                 int randomHeight = Random.Range(3, 8);
                 int randomWidth = Random.Range(4, 8);
-                Vector3 tempPosition = new Vector3(transform.position.x + theFloatingPlatform.GetComponent<BoxCollider2D>().size.x + randomWidth, transform.position.y + randomHeight, transform.position.z);
                 //50%50 chance an enenmy will spawn or a floating platform will spawn
                 int randomChance = Random.Range(0, 2);
                 if (randomChance == 1)
                 {
+                    Vector3 tempPosition = new Vector3(transform.position.x + theFloatingPlatform.GetComponent<BoxCollider2D>().size.x + randomWidth + 10, transform.position.y + randomHeight, transform.position.z);
                     Instantiate(theFloatingPlatform, tempPosition, transform.rotation);
                 }
                 else
                 {
+                    Vector3 tempPosition = new Vector3(transform.position.x + cat.GetComponent<BoxCollider2D>().size.x + randomWidth, transform.position.y + randomHeight, transform.position.z);
                     theEnenmyGenerator.SpawnEnenmy(tempPosition);
                 }
             }
