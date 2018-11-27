@@ -8,6 +8,8 @@ public class PlatformGenerator : MonoBehaviour
     public GameObject thePlatform;
     public GameObject theFloatingPlatform;
     public Transform generationPoint;
+    public GameObject bird;
+    public GameObject cat;
 
     private float platformWidth;
 
@@ -27,8 +29,8 @@ public class PlatformGenerator : MonoBehaviour
         if (transform.position.x < generationPoint.position.x)
         {   
             //Variables
-            float distanceBetweenChance = Random.Range(0, 3);
-            float floatingPlatform = Random.Range(0, 10);
+            float distanceBetweenChance = Random.Range(0, 2);
+            float floatingPlatform = Random.Range(0, 2);
             int distanceBetween = 0;
 
             //One out of 2 chance will there be a hole in the floor
@@ -42,20 +44,34 @@ public class PlatformGenerator : MonoBehaviour
             Instantiate(thePlatform, transform.position, transform.rotation);
 
             //Random floating platforms 2/3 chance
-            if (floatingPlatform != 0)
+            if (floatingPlatform == 0)
             {
                 int randomHeight = Random.Range(3, 8);
-                int randomWidth = Random.Range(4, 8);
-                Vector3 tempPosition = new Vector3(transform.position.x + (theFloatingPlatform.GetComponent<BoxCollider2D>().size.x * 2) + randomWidth, transform.position.y + randomHeight, transform.position.z);
+                int randomWidth = Random.Range(2, 4);
                 //50%50 chance an enenmy will spawn or a floating platform will spawn
                 int randomChance = Random.Range(0, 2);
                 if (randomChance == 1)
                 {
+                    Vector3 tempPosition = new Vector3(transform.position.x + (theFloatingPlatform.GetComponent<BoxCollider2D>().size.x * 2) + randomWidth, transform.position.y + randomHeight, transform.position.z);
                     Instantiate(theFloatingPlatform, tempPosition, transform.rotation);
                 }
                 else
                 {
-                    theEnenmyGenerator.SpawnEnenmy(tempPosition);
+                    int randomEnenmy = Random.Range(0, 2);
+                    string enemy = "";
+                    // 50% chance a bird will spawn or 50% chance a cat will spawn
+                    if (randomEnenmy == 1)
+                    {
+                        Vector3 tempPosition = new Vector3(transform.position.x + (bird.GetComponent<BoxCollider2D>().size.x * 2) + randomWidth - 8, transform.position.y + randomHeight + 1, transform.position.z);
+                        enemy = "bird";
+                        theEnenmyGenerator.SpawnEnenmy(tempPosition, enemy);
+                    }
+                    else
+                    {
+                        Vector3 tempPosition = new Vector3(transform.position.x + (cat.GetComponent<BoxCollider2D>().size.x * 2) + randomWidth + 7, transform.position.y + randomHeight, transform.position.z);
+                        enemy = "cat";
+                        theEnenmyGenerator.SpawnEnenmy(tempPosition, enemy);
+                    }
                 }
             }
         }

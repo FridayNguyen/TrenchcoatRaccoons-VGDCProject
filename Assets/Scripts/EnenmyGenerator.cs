@@ -7,11 +7,11 @@ public class EnenmyGenerator : MonoBehaviour {
     public GameObject jetPackCat;
     public GameObject bird;
 
-    public void SpawnEnenmy(Vector3 startPosition)
+    public void SpawnEnenmy(Vector3 startPosition, string enemy)
     {
-        int randomEnenmy = Random.Range(0, 2);
+ 
         // 50% chance a bird will spawn or 50% chance a cat will spawn
-        if (randomEnenmy == 1)
+        if (enemy == "bird")
         {
             Instantiate(bird, startPosition, transform.rotation);
         }

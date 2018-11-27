@@ -2105,6 +2105,8 @@ MonoBehaviour:
   theFloatingPlatform: {fileID: 1775426471630260, guid: 957a8e0ba415c52489070b96a28d6f4f,
     type: 2}
   generationPoint: {fileID: 745117121}
+  bird: {fileID: 1291580111340388, guid: fec68f4625e5587409f408e7ce922adf, type: 2}
+  cat: {fileID: 1101609696708042, guid: 05da0c11874b5104a89dc95478f529e6, type: 2}
 --- !u!1 &1144835114
 GameObject:
   m_ObjectHideFlags: 0
