@@ -57,6 +57,21 @@ public class RaccoonAction : MonoBehaviour {
         rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpForce);
     }
 
+    private void SpawnRaccoon()
+    {
+        PlayerController playerController = GameObject.Find("AllCoons-DoNotRename").GetComponent<PlayerController>();
+        List<GameObject> allRaccoons = playerController.aliveRaccoonGameObjects;
+        GameObject topRaccoon = allRaccoons[allRaccoons.Count - 1];
+
+        print(topRaccoon.GetComponent<RaccoonAction>().coonIndex);
+
+        Quaternion rotation = transform.rotation;
+        Transform parent = GameObject.Find("AllCoons-DoNotRename").transform;
+        Vector3 spawnPoint = topRaccoon.transform.GetChild(0).transform.position;
+
+        allRaccoons.Add(Instantiate(this.gameObject, spawnPoint, rotation, parent));
+    }
+
     void OnTriggerEnter2D(Collider2D coll)
     {
         
@@ -76,6 +91,11 @@ public class RaccoonAction : MonoBehaviour {
         else if (coll.gameObject.CompareTag("gunpickup"))
         {
             hasGun = true;
+        }
+        else if (coll.gameObject.CompareTag("raccoonpickup"))
+        {
+            Destroy(coll.gameObject);
+            SpawnRaccoon();
         }
     }
 

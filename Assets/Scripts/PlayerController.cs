@@ -7,8 +7,8 @@ public class PlayerController : MonoBehaviour {
 
     private static readonly int MAX_RACCOONS = 10;
 
-    public List<GameObject> aliveRaccoonGameObjects = new List<GameObject>(); //remove static qualifier
-    public int selectedIndex = 0; //remove private static
+    public List<GameObject> aliveRaccoonGameObjects = new List<GameObject>();
+    public int selectedIndex = 0;
     
     void Start () {
         aliveRaccoonGameObjects = InitRaccoons();
@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour {
 
     private void UpdateCoonVar()
     {
-        if (aliveRaccoonGameObjects.Count != 0)
+        if (aliveRaccoonGameObjects.Count > 0)
         {
             for (int i = 0; i < aliveRaccoonGameObjects.Count; i++)
             {
@@ -105,15 +105,11 @@ public class PlayerController : MonoBehaviour {
         aliveRaccoonGameObjects = aliveRaccoonGameObjects.OrderBy(o => o.name).ToList();
 
         print("Raccoon Selector Initialization " +
-            (aliveRaccoonGameObjects.Count == MAX_RACCOONS ?
+            (aliveRaccoonGameObjects.Count > 0 ?
                 "Successful" :
                 "Failed\nCount: " + aliveRaccoonGameObjects.Count));
 
         return aliveRaccoonGameObjects;
     }
 
-    private void AddRaccoon(GameObject raccoonGameObject)
-    {
-        aliveRaccoonGameObjects.Add(raccoonGameObject);
-    }
 }
