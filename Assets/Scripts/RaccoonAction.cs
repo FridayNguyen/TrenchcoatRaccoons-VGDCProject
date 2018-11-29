@@ -22,6 +22,7 @@ public class RaccoonAction : MonoBehaviour {
     public bool isCurrentCoon = false;
     public int coonIndex;
     private Collider2D myCollider;
+    public GameObject bullet;
 
     void Start () {
         myCollider = GetComponent<Collider2D>();
@@ -57,6 +58,15 @@ public class RaccoonAction : MonoBehaviour {
         rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpForce);
     }
 
+    public void Shoot()
+    {
+        if (hasGun)
+        {
+            Vector3 bulletSpawn = this.transform.GetChild(3).transform.position;
+            Instantiate(bullet, bulletSpawn, Quaternion.identity);
+        }
+    }
+
     private void SpawnRaccoon()
     {
         PlayerController playerController = GameObject.Find("AllCoons-DoNotRename").GetComponent<PlayerController>();
@@ -90,6 +100,7 @@ public class RaccoonAction : MonoBehaviour {
         }
         else if (coll.gameObject.CompareTag("gunpickup"))
         {
+            Destroy(coll.gameObject);
             hasGun = true;
         }
         else if (coll.gameObject.CompareTag("raccoonpickup"))

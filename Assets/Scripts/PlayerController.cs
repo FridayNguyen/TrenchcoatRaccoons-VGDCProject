@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour {
 
     private void Shoot()
     {
-        aliveRaccoonGameObjects[selectedIndex].GetComponent<pickup_detector>().Shoot();
+        aliveRaccoonGameObjects[selectedIndex].GetComponent<RaccoonAction>().Shoot();
     }
 
     private void Select(int index)
