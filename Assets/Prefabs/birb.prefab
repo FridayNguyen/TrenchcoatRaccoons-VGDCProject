@@ -99,9 +99,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
-  frequency: 5.5
+  frequency: 3
   magnitude: 1
-  playerRange: 12
+  playerRange: 15
   playerInRange: 0
   playerLayer:
     serializedVersion: 2
