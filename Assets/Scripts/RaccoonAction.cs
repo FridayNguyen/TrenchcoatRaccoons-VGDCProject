@@ -11,6 +11,8 @@ public class RaccoonAction : MonoBehaviour {
 
     private Animator myAnimator;
 
+    public AudioSource ShootSound;
+
     public bool isTop = false;
     public bool isBottom = false;
     public bool isMiddle = false;
@@ -64,6 +66,7 @@ public class RaccoonAction : MonoBehaviour {
         {
             Vector3 bulletSpawn = this.transform.GetChild(3).transform.position;
             Instantiate(bullet, bulletSpawn, Quaternion.identity);
+            ShootSound.Play();
         }
     }
 

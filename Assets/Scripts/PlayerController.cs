@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour {
     public int selectedIndex = 0;
 
     public AudioSource jumpSound;
-    public AudioSource shootSound;
     
     void Start () {
         aliveRaccoonGameObjects = InitRaccoons();
@@ -41,7 +40,6 @@ public class PlayerController : MonoBehaviour {
             else if (Input.GetKeyDown(KeyCode.X))
             {
                 Shoot();
-                shootSound.Play();
             }
         }
     }
