@@ -11,6 +11,7 @@ TagManager:
   - toptrigger
   - bottrigger
   - gunpickup
+  - raccoonpickup
   layers:
   - Default
   - TransparentFX

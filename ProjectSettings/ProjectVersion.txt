@@ -1,4 +1,1 @@
-m_EditorVersion: 2018.2.14f1
-=======
-m_EditorVersion: 2018.2.11f1
->>>>>>> d3f2c1077664e48062e2a28c554aeef4e7b45a9e
+m_EditorVersion: 2018.2.17f1
