@@ -522,6 +522,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   ShootSound: {fileID: 0}
+  JumpSound: {fileID: 0}
   isTop: 0
   isBottom: 0
   isMiddle: 0
@@ -778,6 +779,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   ShootSound: {fileID: 0}
+  JumpSound: {fileID: 0}
   isTop: 0
   isBottom: 0
   isMiddle: 0
@@ -1538,6 +1540,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   ShootSound: {fileID: 0}
+  JumpSound: {fileID: 0}
   isTop: 0
   isBottom: 0
   isMiddle: 0
@@ -1793,6 +1796,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   ShootSound: {fileID: 0}
+  JumpSound: {fileID: 0}
   isTop: 0
   isBottom: 0
   isMiddle: 0
@@ -1974,6 +1978,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   ShootSound: {fileID: 0}
+  JumpSound: {fileID: 0}
   isTop: 0
   isBottom: 0
   isMiddle: 0
@@ -2571,6 +2576,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   ShootSound: {fileID: 0}
+  JumpSound: {fileID: 0}
   isTop: 0
   isBottom: 0
   isMiddle: 0
@@ -2871,7 +2877,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aliveRaccoonGameObjects: []
   selectedIndex: 0
-  jumpSound: {fileID: 0}
 --- !u!114 &1203418711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2889,6 +2894,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   ShootSound: {fileID: 0}
+  JumpSound: {fileID: 0}
   isTop: 0
   isBottom: 0
   isMiddle: 0
@@ -3343,6 +3349,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   ShootSound: {fileID: 1245831000}
+  JumpSound: {fileID: 569429373}
   isTop: 0
   isBottom: 0
   isMiddle: 0
@@ -3367,7 +3374,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aliveRaccoonGameObjects: []
   selectedIndex: 0
-  jumpSound: {fileID: 0}
 --- !u!50 &1334578380
 Rigidbody2D:
   serializedVersion: 4
@@ -3476,7 +3482,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aliveRaccoonGameObjects: []
   selectedIndex: 0
-  jumpSound: {fileID: 569429373}
 --- !u!1 &1379422820
 GameObject:
   m_ObjectHideFlags: 0
@@ -3647,6 +3652,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   ShootSound: {fileID: 0}
+  JumpSound: {fileID: 0}
   isTop: 0
   isBottom: 0
   isMiddle: 0
@@ -4608,6 +4614,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   ShootSound: {fileID: 0}
+  JumpSound: {fileID: 0}
   isTop: 0
   isBottom: 0
   isMiddle: 0
@@ -4830,6 +4837,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   ShootSound: {fileID: 0}
+  JumpSound: {fileID: 0}
   isTop: 0
   isBottom: 0
   isMiddle: 0
