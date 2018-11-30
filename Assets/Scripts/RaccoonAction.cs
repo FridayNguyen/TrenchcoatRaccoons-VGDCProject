@@ -12,6 +12,7 @@ public class RaccoonAction : MonoBehaviour {
     private Animator myAnimator;
 
     public AudioSource ShootSound;
+    public AudioSource JumpSound;
 
     public bool isTop = false;
     public bool isBottom = false;
@@ -58,6 +59,7 @@ public class RaccoonAction : MonoBehaviour {
     {
         Rigidbody2D rigidbody2D = GetComponent<Rigidbody2D>();
         rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpForce);
+        JumpSound.Play();
     }
 
     public void Shoot()

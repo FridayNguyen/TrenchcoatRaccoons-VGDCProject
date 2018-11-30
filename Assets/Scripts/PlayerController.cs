@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour {
     public List<GameObject> aliveRaccoonGameObjects = new List<GameObject>();
     public int selectedIndex = 0;
 
-    public AudioSource jumpSound;
     
     void Start () {
         aliveRaccoonGameObjects = InitRaccoons();
@@ -27,7 +26,6 @@ public class PlayerController : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 Jump();
-                jumpSound.Play();
             }
             else if (Input.GetKeyDown(KeyCode.UpArrow))
             {
