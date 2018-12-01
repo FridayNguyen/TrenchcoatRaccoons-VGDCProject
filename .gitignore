@@ -44,3 +44,4 @@ Temp/UnityLockfile
 
 # Crashlytics generated file
 Assets/StreamingAssets/crashlytics-build.properties
+*.meta
