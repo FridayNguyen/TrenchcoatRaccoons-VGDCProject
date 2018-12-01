@@ -2407,7 +2407,7 @@ MonoBehaviour:
   bird: {fileID: 1291580111340388, guid: fec68f4625e5587409f408e7ce922adf, type: 2}
   cat: {fileID: 1101609696708042, guid: 05da0c11874b5104a89dc95478f529e6, type: 2}
   gunPickUp: {fileID: 1713923144756046, guid: 2dab08b4fb58b584b83e3d6f7e0d70b5, type: 2}
-  raccoonPickUp: {fileID: 1434150993187048, guid: fb163043ee146274f849e095a6f2dcd5,
+  raccoonPickUp: {fileID: 1914469664771908, guid: 5719913380c19744883e10f0c3937955,
     type: 2}
 --- !u!1 &1144835114
 GameObject:
