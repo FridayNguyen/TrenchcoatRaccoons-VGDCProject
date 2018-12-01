@@ -10,6 +10,8 @@ public class PlatformGenerator : MonoBehaviour
     public Transform generationPoint;
     public GameObject bird;
     public GameObject cat;
+    public GameObject gunPickUp;
+    public GameObject raccoonPickUp;
 
     private float platformWidth;
 
@@ -43,6 +45,20 @@ public class PlatformGenerator : MonoBehaviour
             transform.position = new Vector3(transform.position.x + platformWidth + distanceBetween, transform.position.y, transform.position.z);
             Instantiate(thePlatform, transform.position, transform.rotation);
 
+            Vector3 pickUpPosition = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
+            //Spawning pickups on main platform
+            //Pick up spawning
+            //random pick up
+            int randomPickUp1 = Random.Range(0, 4);
+            if (randomPickUp1 == 1)
+            {
+                Instantiate(gunPickUp, pickUpPosition, transform.rotation);
+            }
+            if(randomPickUp1 == 2)
+            {
+                Instantiate(raccoonPickUp, pickUpPosition, transform.rotation);
+            }
+
             //Random floating platforms 2/3 chance
             if (floatingPlatform != 0)
             {
@@ -59,6 +75,19 @@ public class PlatformGenerator : MonoBehaviour
                     {
                         Vector3 newTempPosition = new Vector3(transform.position.x + (theFloatingPlatform.GetComponent<BoxCollider2D>().size.x * 2) + randomWidth + randomWidth, transform.position.y + randomHeight, transform.position.z);
                         Instantiate(theFloatingPlatform, newTempPosition, transform.rotation);
+                        //Spawning pickups on floating platforms
+                        //Pick up spawning
+                        newTempPosition.y += 1;
+                        //random pick up
+                        int randomPickUp = Random.Range(0, 4);
+                        if (randomPickUp == 1)
+                        {
+                            Instantiate(gunPickUp, newTempPosition, transform.rotation);
+                        }
+                        if (randomPickUp == 2)
+                        {
+                            Instantiate(raccoonPickUp, newTempPosition, transform.rotation);
+                        }
                     }
                 }
                 else
