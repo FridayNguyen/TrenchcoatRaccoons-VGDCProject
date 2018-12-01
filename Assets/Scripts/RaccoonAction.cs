@@ -111,7 +111,7 @@ public class RaccoonAction : MonoBehaviour {
         else if (coll.gameObject.CompareTag("raccoonpickup"))
         {
             Destroy(coll.gameObject);
-            SpawnRaccoon();
+//            SpawnRaccoon();
         }
     }
 
