@@ -48,7 +48,9 @@ public class PlayerController : MonoBehaviour {
         {
             if (aliveRaccoonGameObjects[i].GetComponent<RaccoonAction>().grounded || aliveRaccoonGameObjects[i].GetComponent<RaccoonAction>().hasCoonBelow)
             {
-                aliveRaccoonGameObjects[i].GetComponent<RaccoonAction>().Jump();
+                RaccoonAction raccoonAction = aliveRaccoonGameObjects[i].GetComponent<RaccoonAction>();
+                raccoonAction.hasCoonBelow = false;
+                raccoonAction.Jump();
             }
         }  
     }
