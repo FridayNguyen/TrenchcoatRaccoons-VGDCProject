@@ -64,7 +64,7 @@ public class PlatformGenerator : MonoBehaviour
             {
       
 
-                int randomHeight = Random.Range(1, 3);
+                int randomHeight = Random.Range(1, 4);
                 randomHeight *= 2;
                 int randomWidth = Random.Range(2, 4);
                 //50%50 chance an enenmy will spawn or a floating platform will spawn
@@ -72,11 +72,11 @@ public class PlatformGenerator : MonoBehaviour
                 if (randomChance == 1)
                 {
                     int randomSizePlatform = Random.Range(0, 4);
-                    Vector3 tempPosition = new Vector3(transform.position.x + (theFloatingPlatform.GetComponent<BoxCollider2D>().size.x * 2) + randomWidth, transform.position.y + 2, transform.position.z);
+                    Vector3 tempPosition = new Vector3(transform.position.x + (theFloatingPlatform.GetComponent<BoxCollider2D>().size.x * 2) + randomWidth + 1, transform.position.y + randomHeight, transform.position.z);
                     Instantiate(theFloatingPlatform, tempPosition, transform.rotation);
                     if (randomSizePlatform != 1)
                     {
-                        Vector3 newTempPosition = new Vector3(transform.position.x + (theFloatingPlatform.GetComponent<BoxCollider2D>().size.x * 2) + randomWidth + randomWidth - 1, transform.position.y + 2, transform.position.z);
+                        Vector3 newTempPosition = new Vector3(transform.position.x + (theFloatingPlatform.GetComponent<BoxCollider2D>().size.x * 2) + randomWidth + randomWidth, transform.position.y + randomHeight, transform.position.z);
                         Instantiate(theFloatingPlatform, newTempPosition, transform.rotation);
                         //Spawning pickups on floating platforms
                         //Pick up spawning
@@ -87,7 +87,7 @@ public class PlatformGenerator : MonoBehaviour
                         {
                             Instantiate(gunPickUp, newTempPosition, transform.rotation);
                         }
-                        if (randomPickUp == 2)
+                        if (randomPickUp != 1)
                         {
                             Instantiate(raccoonPickUp, newTempPosition, transform.rotation);
                         }
@@ -100,13 +100,13 @@ public class PlatformGenerator : MonoBehaviour
                     // 50% chance a bird will spawn or 50% chance a cat will spawn
                     if (randomEnenmy == 1)
                     {
-                        Vector3 tempPosition = new Vector3(transform.position.x + (bird.GetComponent<BoxCollider2D>().size.x * 2) + randomWidth - 8, transform.position.y + randomHeight + 1, transform.position.z);
+                        Vector3 tempPosition = new Vector3(transform.position.x + (bird.GetComponent<BoxCollider2D>().size.x * 2) + randomWidth - 8, transform.position.y + randomHeight + 2, transform.position.z);
                         enemy = "bird";
                         theEnenmyGenerator.SpawnEnenmy(tempPosition, enemy);
                     }
                     else
                     {
-                        Vector3 tempPosition = new Vector3(transform.position.x + (cat.GetComponent<BoxCollider2D>().size.x * 2) + randomWidth + 7, transform.position.y + randomHeight, transform.position.z);
+                        Vector3 tempPosition = new Vector3(transform.position.x + (cat.GetComponent<BoxCollider2D>().size.x * 2) + randomWidth + 7, transform.position.y + randomHeight + 1, transform.position.z);
                         enemy = "cat";
                         theEnenmyGenerator.SpawnEnenmy(tempPosition, enemy);
                     }
