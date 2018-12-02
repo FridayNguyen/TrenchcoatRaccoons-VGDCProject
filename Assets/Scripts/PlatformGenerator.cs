@@ -12,7 +12,7 @@ public class PlatformGenerator : MonoBehaviour
     public GameObject cat;
     public GameObject gunPickUp;
     public GameObject raccoonPickUp;
-    public GameObject spike;
+    public GameObject platformSpike;
 
     private float platformWidth;
 
@@ -73,14 +73,13 @@ public class PlatformGenerator : MonoBehaviour
                 if (randomChance == 1)
                 {
                     int randomSizePlatform = Random.Range(0, 4);
-                    //Create Spike before floating platform
-                    Vector3 tempPositionSpike = new Vector3(transform.position.x + (theFloatingPlatform.GetComponent<BoxCollider2D>().size.x * 2) + randomWidth + 1, transform.position.y + randomHeight, transform.position.z);
-                    //rotation = transform.rotation 
-                    Instantiate(spike, tempPositionSpike, Quaternion.Euler(-45,0,0));
+                    /*//Create Spike before floating platform
+                    Vector3 tempPositionSpike = new Vector3(transform.position.x + (theFloatingPlatform.GetComponent<BoxCollider2D>().size.x * 2) + randomWidth, transform.position.y + randomHeight, transform.position.z);
+                    Instantiate(spike, tempPositionSpike, transform.rotation);*/
 
                     //Create floating platform
-                    Vector3 tempPosition = new Vector3(transform.position.x + (theFloatingPlatform.GetComponent<BoxCollider2D>().size.x * 2) + randomWidth + 1, transform.position.y + randomHeight, transform.position.z);
-                    Instantiate(theFloatingPlatform, tempPosition, transform.rotation);
+                    Vector3 tempPosition = new Vector3(transform.position.x + (platformSpike.GetComponent<BoxCollider2D>().size.x * 2) + randomWidth + 2, transform.position.y + randomHeight, transform.position.z);
+                    Instantiate(platformSpike, tempPosition, transform.rotation);
                     if (randomSizePlatform != 1)
                     {
                         Vector3 newTempPosition = new Vector3(transform.position.x + (theFloatingPlatform.GetComponent<BoxCollider2D>().size.x * 2) + randomWidth + randomWidth, transform.position.y + randomHeight, transform.position.z);
