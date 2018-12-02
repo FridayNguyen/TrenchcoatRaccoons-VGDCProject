@@ -9,6 +9,8 @@ public class RaccoonAction : MonoBehaviour {
     public bool grounded;
     public LayerMask whatIsGround;
 
+    public GameObject deathParticle;
+
     private Animator myAnimator;
 
     public AudioSource ShootSound;
@@ -43,6 +45,9 @@ public class RaccoonAction : MonoBehaviour {
         isMiddle = (!isTop && !isBottom);
         isCurrentCoon = (GameObject.Find("AllCoons-DoNotRename").GetComponent<PlayerController>().selectedIndex == coonIndex);
 
+        this.transform.Find("gunhand").GetComponent<Renderer>().enabled = hasGun;
+       
+
         myAnimator.SetBool("grounded", grounded);
         myAnimator.SetBool("isTop", isTop);
         myAnimator.SetBool("isBottom", isBottom);
@@ -69,6 +74,7 @@ public class RaccoonAction : MonoBehaviour {
             Vector3 bulletSpawn = this.transform.GetChild(3).transform.position;
             Instantiate(bullet, bulletSpawn, Quaternion.identity);
             ShootSound.Play();
+            hasGun = false;
         }
     }
 
@@ -89,29 +95,33 @@ public class RaccoonAction : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D coll)
     {
-        
         if (coll.gameObject.CompareTag("enemy"))
         {
             GameObject.Find("AllCoons-DoNotRename").GetComponent<PlayerController>().aliveRaccoonGameObjects.Remove(gameObject);
+            Instantiate(deathParticle, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
-        else if (coll.gameObject.CompareTag("toptrigger"))
-        {
-            hasCoonBelow = true;
-        }
-        else if (coll.gameObject.CompareTag("bottrigger"))
-        {
-            hasCoonAbove = true;
-        }
-        else if (coll.gameObject.CompareTag("gunpickup"))
+        if (coll.gameObject.CompareTag("gunpickup"))
         {
             Destroy(coll.gameObject);
             hasGun = true;
         }
-        else if (coll.gameObject.CompareTag("raccoonpickup"))
+        if (coll.gameObject.CompareTag("raccoonpickup"))
         {
             Destroy(coll.gameObject);
 //            SpawnRaccoon();
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D coll)
+    {
+        if (coll.gameObject.CompareTag("toptrigger"))
+        {
+            hasCoonBelow = true;
+        }
+        if (coll.gameObject.CompareTag("bottrigger"))
+        {
+            hasCoonAbove = true;
         }
     }
 
@@ -121,7 +131,7 @@ public class RaccoonAction : MonoBehaviour {
         {
             hasCoonBelow = false;
         }
-        else if (coll.gameObject.CompareTag("bottrigger"))
+        if (coll.gameObject.CompareTag("bottrigger"))
         {
             hasCoonAbove = false;
         }

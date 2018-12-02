@@ -12,10 +12,7 @@ public class enemyhitdetector : MonoBehaviour
             Destroy(collision.gameObject);
             BulletDetected();
         }
-        else if (collision.gameObject.CompareTag("gunpickup"))
-        {
 
-        }
     }
 
     //This method runs when a bullet collides with this object.

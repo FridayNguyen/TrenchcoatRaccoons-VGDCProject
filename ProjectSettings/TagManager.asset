@@ -12,6 +12,8 @@ TagManager:
   - bottrigger
   - gunpickup
   - raccoonpickup
+  - spike
+  - coonhitbox
   layers:
   - Default
   - TransparentFX
@@ -48,4 +50,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: gunhand
+    uniqueID: 2314503945
+    locked: 0
+  - name: coon
+    uniqueID: 3243434525
     locked: 0
