@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour {
     public List<GameObject> aliveRaccoonGameObjects = new List<GameObject>();
     public int selectedIndex = 0;
 
+    public AudioSource SelectSound;
+
     
     void Start () {
         aliveRaccoonGameObjects = InitRaccoons();
@@ -72,6 +74,7 @@ public class PlayerController : MonoBehaviour {
             selectedIndex++;
 
         print("Current Index: " + selectedIndex);
+        SelectSound.Play();
     }
 
     private void SelectDown()
@@ -80,6 +83,7 @@ public class PlayerController : MonoBehaviour {
             selectedIndex--;
 
         print("Current Index: " + selectedIndex);
+        SelectSound.Play();
     }
 
     private void Shoot()
