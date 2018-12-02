@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 61156318663214448}
   - component: {fileID: 50553143797277688}
   - component: {fileID: 114150932406234682}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: cat_lemon
   m_TagString: enemy
   m_Icon: {fileID: 0}

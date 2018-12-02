@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 61400335458593510}
   - component: {fileID: 50936431445336410}
   - component: {fileID: 114387699932241750}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: birb
   m_TagString: enemy
   m_Icon: {fileID: 0}
