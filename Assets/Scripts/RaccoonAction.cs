@@ -15,6 +15,7 @@ public class RaccoonAction : MonoBehaviour {
 
     public AudioSource ShootSound;
     public AudioSource JumpSound;
+    public AudioSource Raccon_DeathSound;
 
     public bool isTop = false;
     public bool isBottom = false;
@@ -99,6 +100,7 @@ public class RaccoonAction : MonoBehaviour {
         {
             GameObject.Find("AllCoons-DoNotRename").GetComponent<PlayerController>().aliveRaccoonGameObjects.Remove(gameObject);
             Instantiate(deathParticle, gameObject.transform.position, gameObject.transform.rotation);
+            Raccon_DeathSound.Play();
             Destroy(gameObject);
         }
         if (coll.gameObject.CompareTag("gunpickup"))

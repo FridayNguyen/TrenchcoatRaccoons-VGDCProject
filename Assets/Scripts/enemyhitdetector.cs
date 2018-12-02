@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class enemyhitdetector : MonoBehaviour
 {
+    public AudioSource Enemy_DeathSound;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -18,6 +19,7 @@ public class enemyhitdetector : MonoBehaviour
     //This method runs when a bullet collides with this object.
     void BulletDetected()
     {
+        Enemy_DeathSound.Play();
         Destroy(this.gameObject);
     }
 }
