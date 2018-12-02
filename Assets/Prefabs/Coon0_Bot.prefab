@@ -330,7 +330,7 @@ MonoBehaviour:
   hasCoonBelow: 0
   isCurrentCoon: 0
   coonIndex: 0
-  bullet: {fileID: 1231717607098840, guid: ecb09c0d806bd334294bc51843877835, type: 2}
+  bullet: {fileID: 1800603216487938, guid: 27de5f0ebad70fa4d9e349ebc769e305, type: 2}
 --- !u!212 &212110496381163194
 SpriteRenderer:
   m_ObjectHideFlags: 1
