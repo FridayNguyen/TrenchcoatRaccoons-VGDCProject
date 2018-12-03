@@ -1580,7 +1580,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4451351407880308, guid: fec68f4625e5587409f408e7ce922adf, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.47
+      value: 4.23
       objectReference: {fileID: 0}
     - target: {fileID: 4451351407880308, guid: fec68f4625e5587409f408e7ce922adf, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2763,7 +2763,7 @@ MonoBehaviour:
   cat: {fileID: 1101609696708042, guid: 05da0c11874b5104a89dc95478f529e6, type: 2}
   gunPickUp: {fileID: 1713923144756046, guid: 2dab08b4fb58b584b83e3d6f7e0d70b5, type: 2}
   raccoonPickUp: {fileID: 1668027798}
-  platformSpike: {fileID: 1153444361952030, guid: 5bd6ae1448a96b24cba79be7e12fb3a4,
+  platformSpike: {fileID: 1491115009370770, guid: 5bd6ae1448a96b24cba79be7e12fb3a4,
     type: 2}
 --- !u!1 &1144835114
 GameObject:
@@ -2962,7 +2962,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4321432336953538, guid: 05da0c11874b5104a89dc95478f529e6, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.2
+      value: 5.39
       objectReference: {fileID: 0}
     - target: {fileID: 4321432336953538, guid: 05da0c11874b5104a89dc95478f529e6, type: 2}
       propertyPath: m_LocalPosition.z
