@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RaccoonAction : MonoBehaviour {
 
@@ -119,9 +120,13 @@ public class RaccoonAction : MonoBehaviour {
     {
         List<GameObject> allRaccoons = playerController.aliveRaccoonGameObjects;
         int index = allRaccoons.IndexOf(gameObject);
+
         if (index == allRaccoons.Count - 1)
             playerController.SelectDown();
+
         allRaccoons.Remove(gameObject);
-        if (allRaccoons.Count == 0) playerController.Restart();
+
+        if (allRaccoons.Count == 0)
+            SceneManager.LoadScene("GameOver", LoadSceneMode.Additive);
     }
 }

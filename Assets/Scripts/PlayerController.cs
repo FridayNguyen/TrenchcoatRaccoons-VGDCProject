@@ -116,9 +116,4 @@ public class PlayerController : MonoBehaviour {
 
         return aliveRaccoonGameObjects;
     }
-
-    public void Restart()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
 }
