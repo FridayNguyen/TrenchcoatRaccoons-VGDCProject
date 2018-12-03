@@ -18,7 +18,7 @@ public class PlatformDestroyer : MonoBehaviour {
         {
             if (gameObject.CompareTag("Player"))
             {
-                GameObject.Find("AllCoons-DoNotRename").GetComponent<PlayerController>().aliveRaccoonGameObjects.Remove(gameObject);
+                GameObject.Find("PlayerController").GetComponent<PlayerController>().aliveRaccoonGameObjects.Remove(gameObject);
                 Instantiate(deathParticle, gameObject.transform.position, gameObject.transform.rotation);
             }
             Destroy(gameObject);

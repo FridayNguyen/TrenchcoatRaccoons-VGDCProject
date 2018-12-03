@@ -30,7 +30,10 @@ public class RaccoonAction : MonoBehaviour {
     private Collider2D myCollider;
     public GameObject bullet;
 
+    private PlayerController playerController;
+
     void Start () {
+        playerController = GameObject.Find("PlayerController").GetComponent<PlayerController>();
         myCollider = GetComponent<Collider2D>();
         myAnimator = GetComponent<Animator>();
     }
@@ -44,7 +47,7 @@ public class RaccoonAction : MonoBehaviour {
         isTop = !hasCoonAbove;
         isBottom = !hasCoonBelow;
         isMiddle = (!isTop && !isBottom);
-        isCurrentCoon = (GameObject.Find("AllCoons-DoNotRename").GetComponent<PlayerController>().selectedIndex == coonIndex);
+        isCurrentCoon = (playerController.selectedIndex == coonIndex);
 
         this.transform.Find("gunhand").GetComponent<Renderer>().enabled = hasGun;
        
@@ -79,63 +82,46 @@ public class RaccoonAction : MonoBehaviour {
         }
     }
 
-    private void SpawnRaccoon()
-    {
-        PlayerController playerController = GameObject.Find("AllCoons-DoNotRename").GetComponent<PlayerController>();
-        List<GameObject> allRaccoons = playerController.aliveRaccoonGameObjects;
-        GameObject topRaccoon = allRaccoons[allRaccoons.Count - 1];
-
-        print(topRaccoon.GetComponent<RaccoonAction>().coonIndex);
-
-        Quaternion rotation = transform.rotation;
-        Transform parent = GameObject.Find("AllCoons-DoNotRename").transform;
-        Vector3 spawnPoint = topRaccoon.transform.GetChild(0).transform.position;
-
-        allRaccoons.Add(Instantiate(this.gameObject, spawnPoint, rotation, parent));
-    }
-
     void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.gameObject.CompareTag("enemy"))
+        switch(coll.gameObject.tag)
         {
-            GameObject.Find("AllCoons-DoNotRename").GetComponent<PlayerController>().aliveRaccoonGameObjects.Remove(gameObject);
-            Instantiate(deathParticle, gameObject.transform.position, gameObject.transform.rotation);
-            Raccon_DeathSound.Play();
-            Destroy(gameObject);
-        }
-        if (coll.gameObject.CompareTag("gunpickup"))
-        {
-            Destroy(coll.gameObject);
-            hasGun = true;
-        }
-        if (coll.gameObject.CompareTag("raccoonpickup"))
-        {
-            Destroy(coll.gameObject);
-//            SpawnRaccoon();
+            case "enemy":
+                Destroy(gameObject);
+                Instantiate(deathParticle, gameObject.transform.position, gameObject.transform.rotation);
+                Raccon_DeathSound.Play();
+                break;
+
+            case "gunpickup":
+                Destroy(coll.gameObject);
+                hasGun = true;
+                break;
+
+            case "raccoonpickup":
+                Destroy(coll.gameObject);
+                break;
         }
     }
 
     private void OnTriggerStay2D(Collider2D coll)
     {
-        if (coll.gameObject.CompareTag("toptrigger"))
-        {
-            hasCoonBelow = true;
-        }
-        if (coll.gameObject.CompareTag("bottrigger"))
-        {
-            hasCoonAbove = true;
-        }
+        hasCoonBelow = coll.gameObject.CompareTag("toptrigger");
+        hasCoonAbove = coll.gameObject.CompareTag("bottrigger");
     }
 
     private void OnTriggerExit2D(Collider2D coll)
     {
-        if (coll.gameObject.CompareTag("toptrigger"))
-        {
-            hasCoonBelow = false;
-        }
-        if (coll.gameObject.CompareTag("bottrigger"))
-        {
-            hasCoonAbove = false;
-        }
+        hasCoonBelow = !coll.gameObject.CompareTag("toptrigger");
+        hasCoonAbove = !coll.gameObject.CompareTag("bottrigger");
+    }
+
+    void OnDestroy()
+    {
+        List<GameObject> allRaccoons = playerController.aliveRaccoonGameObjects;
+        int index = allRaccoons.IndexOf(gameObject);
+        if (index == allRaccoons.Count - 1)
+            playerController.SelectDown();
+        allRaccoons.Remove(gameObject);
+        if (allRaccoons.Count == 0) playerController.Restart();
     }
 }

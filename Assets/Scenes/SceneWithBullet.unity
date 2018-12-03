@@ -1580,7 +1580,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4451351407880308, guid: fec68f4625e5587409f408e7ce922adf, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4.23
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: 4451351407880308, guid: fec68f4625e5587409f408e7ce922adf, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2763,7 +2763,7 @@ MonoBehaviour:
   cat: {fileID: 1101609696708042, guid: 05da0c11874b5104a89dc95478f529e6, type: 2}
   gunPickUp: {fileID: 1713923144756046, guid: 2dab08b4fb58b584b83e3d6f7e0d70b5, type: 2}
   raccoonPickUp: {fileID: 1668027798}
-  platformSpike: {fileID: 1491115009370770, guid: 5bd6ae1448a96b24cba79be7e12fb3a4,
+  platformSpike: {fileID: 1153444361952030, guid: 5bd6ae1448a96b24cba79be7e12fb3a4,
     type: 2}
 --- !u!1 &1144835114
 GameObject:
@@ -2962,7 +2962,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4321432336953538, guid: 05da0c11874b5104a89dc95478f529e6, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5.39
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 4321432336953538, guid: 05da0c11874b5104a89dc95478f529e6, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3011,11 +3011,6 @@ Prefab:
         type: 2}
       propertyPath: MeowSound
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114251536013426014, guid: 05da0c11874b5104a89dc95478f529e6,
-        type: 2}
-      propertyPath: playerRange
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05da0c11874b5104a89dc95478f529e6, type: 2}
@@ -3108,7 +3103,6 @@ GameObject:
   - component: {fileID: 1203418703}
   - component: {fileID: 1203418707}
   - component: {fileID: 1203418708}
-  - component: {fileID: 1203418709}
   - component: {fileID: 1203418711}
   m_Layer: 9
   m_Name: raccoonproto
@@ -3249,20 +3243,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
---- !u!114 &1203418709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1203418702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad64495c34f901d408222dd56fae9aca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aliveRaccoonGameObjects: []
-  selectedIndex: 0
-  SelectSound: {fileID: 0}
 --- !u!114 &1203418711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3712,7 +3692,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1376384166}
   - component: {fileID: 1376384167}
-  - component: {fileID: 1376384168}
   m_Layer: 8
   m_Name: AllCoons-DoNotRename
   m_TagString: Untagged
@@ -3733,6 +3712,7 @@ Transform:
   - {fileID: 1203418706}
   - {fileID: 718678138}
   - {fileID: 519420032}
+  - {fileID: 2117078311}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3748,20 +3728,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.1
---- !u!114 &1376384168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1376384165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad64495c34f901d408222dd56fae9aca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aliveRaccoonGameObjects: []
-  selectedIndex: 0
-  SelectSound: {fileID: 0}
 --- !u!1 &1379422820
 GameObject:
   m_ObjectHideFlags: 0
@@ -4545,7 +4511,7 @@ Prefab:
     - target: {fileID: 114242553611780044, guid: 562d1c3b851886148944e751b1cdbb41,
         type: 2}
       propertyPath: jumpForce
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114242553611780044, guid: 562d1c3b851886148944e751b1cdbb41,
         type: 2}
@@ -4577,7 +4543,8 @@ Prefab:
       propertyPath: SelectSound
       value: 
       objectReference: {fileID: 1812771701}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114976404450332744, guid: 562d1c3b851886148944e751b1cdbb41, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 562d1c3b851886148944e751b1cdbb41, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1767576634
@@ -5132,3 +5099,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4941854083955542, guid: a463b3c87bd759c43a0a679cb7d6bbe3,
     type: 2}
   m_PrefabInternal: {fileID: 1233441277}
+--- !u!1 &2117078310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2117078311}
+  - component: {fileID: 2117078312}
+  m_Layer: 8
+  m_Name: PlayerController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &2117078311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2117078310}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1376384166}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2117078312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2117078310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad64495c34f901d408222dd56fae9aca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aliveRaccoonGameObjects: []
+  selectedIndex: 0
+  SelectSound: {fileID: 1812771701}

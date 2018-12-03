@@ -2,17 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
-
-    private static readonly int MAX_RACCOONS = 10;
 
     public List<GameObject> aliveRaccoonGameObjects = new List<GameObject>();
     public int selectedIndex = 0;
 
     public AudioSource SelectSound;
 
-    
     void Start () {
         aliveRaccoonGameObjects = InitRaccoons();
 	}
@@ -57,6 +55,11 @@ public class PlayerController : MonoBehaviour {
         }  
     }
 
+    private void Shoot()
+    {
+        aliveRaccoonGameObjects[selectedIndex].GetComponent<RaccoonAction>().Shoot();
+    }
+
     private void UpdateCoonVar()
     {
         if (aliveRaccoonGameObjects.Count > 0)
@@ -68,7 +71,7 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    private void SelectUp()
+    public void SelectUp()
     {
         if (selectedIndex < aliveRaccoonGameObjects.Count - 1)
             selectedIndex++;
@@ -77,18 +80,13 @@ public class PlayerController : MonoBehaviour {
         SelectSound.Play();
     }
 
-    private void SelectDown()
+    public void SelectDown()
     {
         if (selectedIndex > 0)
             selectedIndex--;
 
         print("Current Index: " + selectedIndex);
         SelectSound.Play();
-    }
-
-    private void Shoot()
-    {
-        aliveRaccoonGameObjects[selectedIndex].GetComponent<RaccoonAction>().Shoot();
     }
 
     private void Select(int index)
@@ -111,12 +109,16 @@ public class PlayerController : MonoBehaviour {
         aliveRaccoonGameObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("Player"));
         aliveRaccoonGameObjects = aliveRaccoonGameObjects.OrderBy(o => o.name).ToList();
 
-        print("Raccoon Selector Initialization " +
-            (aliveRaccoonGameObjects.Count > 0 ?
+        print("Raccoon Initialization " +
+            (aliveRaccoonGameObjects.Count == 1 ?
                 "Successful" :
-                "Failed\nCount: " + aliveRaccoonGameObjects.Count));
+                "Failed"));
 
         return aliveRaccoonGameObjects;
     }
 
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }
