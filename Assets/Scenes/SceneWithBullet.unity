@@ -3012,6 +3012,11 @@ Prefab:
       propertyPath: MeowSound
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114251536013426014, guid: 05da0c11874b5104a89dc95478f529e6,
+        type: 2}
+      propertyPath: playerRange
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05da0c11874b5104a89dc95478f529e6, type: 2}
   m_IsPrefabAsset: 0
