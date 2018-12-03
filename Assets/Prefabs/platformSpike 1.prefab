@@ -37,6 +37,7 @@ GameObject:
   - component: {fileID: 4658282235298342}
   - component: {fileID: 212475741789859708}
   - component: {fileID: 61947554330065500}
+  - component: {fileID: 114286161071519666}
   m_Layer: 8
   m_Name: platformSpike 1
   m_TagString: Untagged
@@ -233,6 +234,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.23973611, y: 0.64305234}
   m_EdgeRadius: 0
+--- !u!114 &114286161071519666
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1153444361952030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89eeceee4d00e8d40b0bac385bcae20d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformDestructionPoint: {fileID: 0}
 --- !u!114 &114637551744968594
 MonoBehaviour:
   m_ObjectHideFlags: 1

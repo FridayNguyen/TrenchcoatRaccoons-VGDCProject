@@ -554,7 +554,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformDestructionPoint: {fileID: 0}
-  deathParticle: {fileID: 0}
 --- !u!1 &261367331
 GameObject:
   m_ObjectHideFlags: 0
@@ -2493,7 +2492,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformDestructionPoint: {fileID: 0}
-  deathParticle: {fileID: 0}
 --- !u!1 &986229321
 GameObject:
   m_ObjectHideFlags: 0
@@ -2762,7 +2760,8 @@ MonoBehaviour:
   bird: {fileID: 1291580111340388, guid: fec68f4625e5587409f408e7ce922adf, type: 2}
   cat: {fileID: 1101609696708042, guid: 05da0c11874b5104a89dc95478f529e6, type: 2}
   gunPickUp: {fileID: 1713923144756046, guid: 2dab08b4fb58b584b83e3d6f7e0d70b5, type: 2}
-  raccoonPickUp: {fileID: 1668027798}
+  raccoonPickUp: {fileID: 1855046497041954, guid: 39a3ac1078fc4ff4dbf6d5764879d47f,
+    type: 2}
   platformSpike: {fileID: 1153444361952030, guid: 5bd6ae1448a96b24cba79be7e12fb3a4,
     type: 2}
 --- !u!1 &1144835114
@@ -4399,6 +4398,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1855046497041954, guid: 39a3ac1078fc4ff4dbf6d5764879d47f,
     type: 2}
   m_PrefabInternal: {fileID: 806369569}
+--- !u!114 &1668027804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1668027798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89eeceee4d00e8d40b0bac385bcae20d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformDestructionPoint: {fileID: 0}
 --- !u!1001 &1674904742
 Prefab:
   m_ObjectHideFlags: 0
