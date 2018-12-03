@@ -15,6 +15,7 @@ public class BackgroundElementsScroll : MonoBehaviour
 
     void OnBecameInvisible()
     {
-        Instantiate(gameObject, transform.position + new Vector3(38.2f,0f,0f), transform.rotation);
+        //Instantiate(gameObject, transform.position + new Vector3(38.2f,0f,0f), transform.rotation);
+        transform.position += new Vector3(38.2f, 0f, 0f);
     }
 }
