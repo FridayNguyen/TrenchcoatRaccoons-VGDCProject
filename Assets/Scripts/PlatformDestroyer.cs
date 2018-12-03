@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PlatformDestroyer : MonoBehaviour {
 
-    public GameObject platformDestructionPoint;
-    public GameObject deathParticle;
+    public GameObject platformDestructionPoint;   
 
 	// Use this for initialization
 	void Start () {
@@ -16,10 +15,9 @@ public class PlatformDestroyer : MonoBehaviour {
 	void Update () {
         if (transform.position.x < platformDestructionPoint.transform.position.x || transform.position.y < platformDestructionPoint.transform.position.y)
         {
-            if (gameObject.CompareTag("Player"))
+            if (gameObject.tag == "Player")
             {
-                GameObject.Find("PlayerController").GetComponent<PlayerController>().aliveRaccoonGameObjects.Remove(gameObject);
-                Instantiate(deathParticle, gameObject.transform.position, gameObject.transform.rotation);
+                gameObject.GetComponent<RaccoonAction>().WhenDestroy();                
             }
             Destroy(gameObject);
         }

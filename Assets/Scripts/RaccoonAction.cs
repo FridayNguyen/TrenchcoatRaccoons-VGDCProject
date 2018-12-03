@@ -18,7 +18,7 @@ public class RaccoonAction : MonoBehaviour {
     public AudioSource JumpSound;
     public AudioSource Raccon_DeathSound;
 
-    public bool isTop = false;
+    public bool isTop = true;
     public bool isBottom = false;
     public bool isMiddle = false;
     public bool isJumpingUp = false;
@@ -78,8 +78,8 @@ public class RaccoonAction : MonoBehaviour {
         {
             Vector3 bulletSpawn = this.transform.GetChild(3).transform.position;
             Instantiate(bullet, bulletSpawn, Quaternion.identity);
-            ShootSound.Play();
             hasGun = false;
+            ShootSound.Play();           
         }
     }
 
@@ -88,9 +88,8 @@ public class RaccoonAction : MonoBehaviour {
         switch(coll.gameObject.tag)
         {
             case "enemy":
-                Destroy(gameObject);
-                Instantiate(deathParticle, gameObject.transform.position, gameObject.transform.rotation);
-                Raccon_DeathSound.Play();
+                WhenDestroy();
+                Destroy(gameObject);              
                 break;
 
             case "gunpickup":
@@ -116,17 +115,19 @@ public class RaccoonAction : MonoBehaviour {
         hasCoonAbove = !coll.gameObject.CompareTag("bottrigger");
     }
 
-    void OnDestroy()
+    public void WhenDestroy()
     {
+        Instantiate(deathParticle, gameObject.transform.position, gameObject.transform.rotation);       
         List<GameObject> allRaccoons = playerController.aliveRaccoonGameObjects;
         int index = allRaccoons.IndexOf(gameObject);
 
         if (index == allRaccoons.Count - 1)
             playerController.SelectDown();
 
-        allRaccoons.Remove(gameObject);
+        allRaccoons.Remove(gameObject);       
 
         if (allRaccoons.Count == 0)
             SceneManager.LoadScene("GameOver", LoadSceneMode.Additive);
+        Raccon_DeathSound.Play();
     }
 }

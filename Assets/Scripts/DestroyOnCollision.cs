@@ -20,6 +20,7 @@ public class DestroyOnCollision : MonoBehaviour {
     {
         if (col.gameObject.tag == "Player")
         {
+            col.gameObject.GetComponent<RaccoonAction>().WhenDestroy();
             Destroy(col.gameObject);
         }
     }

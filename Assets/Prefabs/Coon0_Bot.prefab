@@ -54,7 +54,6 @@ GameObject:
   - component: {fileID: 4006422630022306}
   - component: {fileID: 212463442188586106}
   - component: {fileID: 50987296700641934}
-  - component: {fileID: 114976404450332744}
   - component: {fileID: 114242553611780044}
   - component: {fileID: 61989333876843606}
   - component: {fileID: 114161515243543356}
@@ -299,7 +298,7 @@ Animator:
   m_GameObject: {fileID: 1677636664315426}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 922724ae07411b044931be6a658fffd6, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -372,20 +371,6 @@ MonoBehaviour:
   isCurrentCoon: 0
   coonIndex: 0
   bullet: {fileID: 1800603216487938, guid: 27de5f0ebad70fa4d9e349ebc769e305, type: 2}
---- !u!114 &114976404450332744
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1705219219655714}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad64495c34f901d408222dd56fae9aca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aliveRaccoonGameObjects: []
-  selectedIndex: 0
-  SelectSound: {fileID: 0}
 --- !u!212 &212463442188586106
 SpriteRenderer:
   m_ObjectHideFlags: 1

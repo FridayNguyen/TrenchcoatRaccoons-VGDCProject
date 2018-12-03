@@ -37,7 +37,6 @@ GameObject:
   - component: {fileID: 4658282235298342}
   - component: {fileID: 212475741789859708}
   - component: {fileID: 61947554330065500}
-  - component: {fileID: 114785579776066616}
   m_Layer: 8
   m_Name: platformSpike 1
   m_TagString: Untagged
@@ -246,20 +245,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 0}
---- !u!114 &114785579776066616
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1153444361952030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89eeceee4d00e8d40b0bac385bcae20d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  platformDestructionPoint: {fileID: 0}
-  deathParticle: {fileID: 1836381337814922, guid: 02bbcb9c57edff54cbbfc0fa6b6786cf,
-    type: 2}
 --- !u!212 &212475741789859708
 SpriteRenderer:
   m_ObjectHideFlags: 1
