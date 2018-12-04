@@ -33,7 +33,7 @@ public class PlatformGenerator : MonoBehaviour
         {   
             //Variables
             float distanceBetweenChance = Random.Range(0, 2);
-            float floatingPlatform = Random.Range(0, 5);
+            float floatingPlatform = Random.Range(0, 4);
             int distanceBetween = 0;
 
             //One out of 2 chance will there be a hole in the floor
