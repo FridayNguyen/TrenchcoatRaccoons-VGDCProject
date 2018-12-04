@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour {
         aliveRaccoonGameObjects[selectedIndex].GetComponent<RaccoonAction>().Shoot();
     }
 
-    private void UpdateCoonVar()
+   /* private void UpdateCoonVar()
     {
         if (aliveRaccoonGameObjects.Count > 0)
         {
@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour {
                 aliveRaccoonGameObjects[i].GetComponent<RaccoonAction>().coonIndex = i;                
             }
         }
-    }
+    }*/
 
     public void SelectUp()
     {

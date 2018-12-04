@@ -46,6 +46,7 @@ public class RaccoonAction : MonoBehaviour {
 	void Update () {
         //grounded = Physics2D.IsTouchingLayers(myCollider, whatIsGround);
         grounded = myCollider.IsTouchingLayers(whatIsGround);
+        coonIndex = playerController.aliveRaccoonGameObjects.IndexOf(gameObject);
 
         isJumpingUp = (GetComponent<Rigidbody2D>().velocity.y > 0);
         isFallingDown = (GetComponent<Rigidbody2D>().velocity.y < 0);
@@ -93,7 +94,7 @@ public class RaccoonAction : MonoBehaviour {
         if (coll.gameObject.tag == "toptrigger" && !coll.transform.IsChildOf(transform))
         {
             hasCoonBelow = true;
-        }
+        }       
         if (coll.gameObject.tag == "bottrigger" && !coll.transform.IsChildOf(transform))
         {
             hasCoonAbove = true;
@@ -118,7 +119,7 @@ public class RaccoonAction : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D coll)
     {
-        
+
     }
 
     private void OnTriggerExit2D(Collider2D coll)
@@ -135,6 +136,14 @@ public class RaccoonAction : MonoBehaviour {
 
     public void WhenDestroy()
     {
+        if (hasCoonBelow)
+        {
+            playerController.aliveRaccoonGameObjects[coonIndex - 1].GetComponent<RaccoonAction>().hasCoonAbove = false;
+        }
+        if (hasCoonAbove)
+        {
+            playerController.aliveRaccoonGameObjects[coonIndex + 1].GetComponent<RaccoonAction>().hasCoonBelow = false;
+        }
         Instantiate(deathParticle, gameObject.transform.position, gameObject.transform.rotation);       
         List<GameObject> allRaccoons = playerController.aliveRaccoonGameObjects;
         int index = allRaccoons.IndexOf(gameObject);
