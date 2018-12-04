@@ -3563,6 +3563,21 @@ Prefab:
       value: 
       objectReference: {fileID: 1836381337814922, guid: 02bbcb9c57edff54cbbfc0fa6b6786cf,
         type: 2}
+    - target: {fileID: 212028982755865592, guid: a463b3c87bd759c43a0a679cb7d6bbe3,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1051532771
+      objectReference: {fileID: 0}
+    - target: {fileID: 212028982755865592, guid: a463b3c87bd759c43a0a679cb7d6bbe3,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 212028982755865592, guid: a463b3c87bd759c43a0a679cb7d6bbe3,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a463b3c87bd759c43a0a679cb7d6bbe3, type: 2}
   m_IsPrefabAsset: 0
@@ -4671,18 +4686,7 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 922724ae07411b044931be6a658fffd6, type: 2}
-    - target: {fileID: 114242553611780044, guid: 562d1c3b851886148944e751b1cdbb41,
-        type: 2}
-      propertyPath: hasCoonBelow
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 65650329614912638, guid: 562d1c3b851886148944e751b1cdbb41,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 65650329614912638, guid: 562d1c3b851886148944e751b1cdbb41, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 562d1c3b851886148944e751b1cdbb41, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1767576634
