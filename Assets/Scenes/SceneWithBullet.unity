@@ -2690,59 +2690,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformDestructionPoint: {fileID: 0}
---- !u!1001 &970672995
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4074716514437016, guid: 39a3ac1078fc4ff4dbf6d5764879d47f, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 18.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 4074716514437016, guid: 39a3ac1078fc4ff4dbf6d5764879d47f, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -3.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 4074716514437016, guid: 39a3ac1078fc4ff4dbf6d5764879d47f, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4074716514437016, guid: 39a3ac1078fc4ff4dbf6d5764879d47f, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4074716514437016, guid: 39a3ac1078fc4ff4dbf6d5764879d47f, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4074716514437016, guid: 39a3ac1078fc4ff4dbf6d5764879d47f, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4074716514437016, guid: 39a3ac1078fc4ff4dbf6d5764879d47f, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4074716514437016, guid: 39a3ac1078fc4ff4dbf6d5764879d47f, type: 2}
-      propertyPath: m_RootOrder
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 114860952184072922, guid: 39a3ac1078fc4ff4dbf6d5764879d47f,
-        type: 2}
-      propertyPath: raccoon
-      value: 
-      objectReference: {fileID: 1705219219655714, guid: 562d1c3b851886148944e751b1cdbb41,
-        type: 2}
-    - target: {fileID: 1855046497041954, guid: 39a3ac1078fc4ff4dbf6d5764879d47f, type: 2}
-      propertyPath: m_Name
-      value: coonpickup (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114483858650426326, guid: 39a3ac1078fc4ff4dbf6d5764879d47f, type: 2}
-  m_SourcePrefab: {fileID: 100100000, guid: 39a3ac1078fc4ff4dbf6d5764879d47f, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &986229321
 GameObject:
   m_ObjectHideFlags: 0
