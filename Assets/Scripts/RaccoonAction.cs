@@ -19,13 +19,13 @@ public class RaccoonAction : MonoBehaviour {
     private AudioSource Raccoon_DeathSound;
 
     public bool isTop = true;
-    public bool isBottom = false;
+    public bool isBottom = true;
     public bool isMiddle = false;
     public bool isJumpingUp = false;
     public bool isFallingDown = false;
     public bool hasGun = false;
     public bool hasCoonAbove = false;
-    public bool hasCoonBelow = true;
+    public bool hasCoonBelow = false;
     public bool isCurrentCoon = false;
     public int coonIndex;
     private Collider2D myCollider;
@@ -162,5 +162,11 @@ public class RaccoonAction : MonoBehaviour {
         if (allRaccoons.Count == 0)
             SceneManager.LoadScene("GameOver", LoadSceneMode.Additive);
         Raccoon_DeathSound.Play();
+    }
+
+    void OnBecameInvisible()
+    {
+        WhenDestroy();
+        Destroy(gameObject);
     }
 }
