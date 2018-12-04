@@ -13,6 +13,7 @@ public class PlatformGenerator : MonoBehaviour
     public GameObject gunPickUp;
     public GameObject raccoonPickUp;
     public GameObject platformSpike;
+    public GameObject groundPlatformSpike;
 
     private float platformWidth;
 
@@ -43,14 +44,21 @@ public class PlatformGenerator : MonoBehaviour
             }
 
             //Floor Platform, distancebetween will vary due to random distance chance
-            transform.position = new Vector3(transform.position.x + platformWidth + distanceBetween, transform.position.y, transform.position.z);
-            Instantiate(thePlatform, transform.position, transform.rotation);
+            if (distanceBetween == 2)
+            {
+                transform.position = new Vector3(transform.position.x + platformWidth + distanceBetween, transform.position.y, transform.position.z);
+                Instantiate(groundPlatformSpike, transform.position, transform.rotation);
+            }
+            else {
+                transform.position = new Vector3(transform.position.x + platformWidth + distanceBetween, transform.position.y, transform.position.z);
+                Instantiate(thePlatform, transform.position, transform.rotation);
+            }
 
             Vector3 pickUpPosition = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
             //Spawning pickups on main platform
             //Pick up spawning
             //random pick up
-            int randomPickUp1 = Random.Range(0, 4);
+            int randomPickUp1 = Random.Range(0, 5);
             if (randomPickUp1 == 1)
             {
                 Instantiate(gunPickUp, pickUpPosition, transform.rotation);
@@ -112,7 +120,7 @@ public class PlatformGenerator : MonoBehaviour
                     }
                     else
                     {
-                        Vector3 tempPosition = new Vector3(transform.position.x + (cat.GetComponent<BoxCollider2D>().size.x * 2) + randomWidth + 7, transform.position.y + randomHeight, transform.position.z);
+                        Vector3 tempPosition = new Vector3(transform.position.x + (cat.GetComponent<BoxCollider2D>().size.x * 2) + randomWidth + 7, transform.position.y + randomHeight+1, transform.position.z);
                         enemy = "cat";
                         theEnenmyGenerator.SpawnEnenmy(tempPosition, enemy);
                     }

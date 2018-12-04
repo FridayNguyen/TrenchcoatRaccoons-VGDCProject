@@ -2962,6 +2962,8 @@ MonoBehaviour:
     type: 2}
   platformSpike: {fileID: 1153444361952030, guid: 5bd6ae1448a96b24cba79be7e12fb3a4,
     type: 2}
+  groundPlatformSpike: {fileID: 1877399833918762, guid: 7316d36958dcae449bad1fbc439d310b,
+    type: 2}
 --- !u!1 &1144835114
 GameObject:
   m_ObjectHideFlags: 0
