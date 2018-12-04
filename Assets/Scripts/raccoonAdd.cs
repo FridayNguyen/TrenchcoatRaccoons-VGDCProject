@@ -17,7 +17,7 @@ public class raccoonAdd : MonoBehaviour {
         Quaternion rotation = transform.rotation;
         Transform parent = GameObject.Find("AllCoons-DoNotRename").transform;
         float x = topRaccoon.transform.GetChild(0).transform.position.x;
-        float y = mainCamera.transform.position.y + mainCamera.transform.localScale.y;
+        float y = mainCamera.transform.position.y + mainCamera.transform.localScale.y * (0.6f);
         Vector3 spawnPoint = new Vector3(x, y); 
 
         allRaccoons.Add(Instantiate(raccoon, spawnPoint, rotation, parent));
