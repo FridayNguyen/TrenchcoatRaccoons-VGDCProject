@@ -448,7 +448,7 @@ MonoBehaviour:
   isFallingDown: 0
   hasGun: 0
   hasCoonAbove: 0
-  hasCoonBelow: 0
+  hasCoonBelow: 1
   isCurrentCoon: 0
   coonIndex: 0
   bullet: {fileID: 1800603216487938, guid: 27de5f0ebad70fa4d9e349ebc769e305, type: 2}

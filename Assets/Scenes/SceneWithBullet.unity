@@ -4723,6 +4723,11 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 922724ae07411b044931be6a658fffd6, type: 2}
+    - target: {fileID: 114242553611780044, guid: 562d1c3b851886148944e751b1cdbb41,
+        type: 2}
+      propertyPath: hasCoonBelow
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 562d1c3b851886148944e751b1cdbb41, type: 2}
   m_IsPrefabAsset: 0
