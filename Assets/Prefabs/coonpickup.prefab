@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 61035230040256050}
   - component: {fileID: 114860952184072922}
   - component: {fileID: 95924099881529098}
+  - component: {fileID: 114483858650426326}
   m_Layer: 0
   m_Name: coonpickup
   m_TagString: raccoonpickup
@@ -86,6 +87,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114483858650426326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1855046497041954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89eeceee4d00e8d40b0bac385bcae20d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformDestructionPoint: {fileID: 0}
 --- !u!114 &114860952184072922
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -97,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a52c77215625a84faa2ddb67fca15b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  raccoon: {fileID: 1826731933746016, guid: 562d1c3b851886148944e751b1cdbb41, type: 2}
+  raccoon: {fileID: 1705219219655714, guid: 562d1c3b851886148944e751b1cdbb41, type: 2}
 --- !u!212 &212346979988935992
 SpriteRenderer:
   m_ObjectHideFlags: 1

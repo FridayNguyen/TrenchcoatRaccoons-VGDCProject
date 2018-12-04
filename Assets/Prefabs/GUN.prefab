@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212551830035795586}
   - component: {fileID: 114579698332777924}
   - component: {fileID: 61550166543753316}
+  - component: {fileID: 114714876206064910}
   m_Layer: 0
   m_Name: GUN
   m_TagString: gunpickup
@@ -81,6 +82,18 @@ MonoBehaviour:
   rate: 1.2
   speed: 0.3
   destroytime: 40
+--- !u!114 &114714876206064910
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1713923144756046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89eeceee4d00e8d40b0bac385bcae20d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformDestructionPoint: {fileID: 0}
 --- !u!212 &212551830035795586
 SpriteRenderer:
   m_ObjectHideFlags: 1
