@@ -136,7 +136,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1228066451347928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.37, y: 4.11, z: 0}
+  m_LocalPosition: {x: -0.37, y: 4.16, z: 0}
   m_LocalScale: {x: 2.75, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4006422630022306}
@@ -188,7 +188,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1908608722146188}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.4, y: -5.45, z: 0}
+  m_LocalPosition: {x: -0.4, y: -5.68, z: 0}
   m_LocalScale: {x: 2.75, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4006422630022306}
@@ -226,7 +226,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.3716392}
+  m_Offset: {x: 0, y: -0.27747816}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -237,7 +237,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 0.25672162}
+  m_Size: {x: 1.5, y: 0.44504365}
   m_EdgeRadius: 0
 --- !u!61 &61460421869347888
 BoxCollider2D:
@@ -251,7 +251,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.24299558}
+  m_Offset: {x: 0, y: 0.26252368}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -262,7 +262,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 0.5140088}
+  m_Size: {x: 1.5, y: 0.41182202}
   m_EdgeRadius: 0
 --- !u!61 &61989333876843606
 BoxCollider2D:
@@ -337,8 +337,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformDestructionPoint: {fileID: 0}
-  deathParticle: {fileID: 1836381337814922, guid: 02bbcb9c57edff54cbbfc0fa6b6786cf,
-    type: 2}
 --- !u!114 &114242553611780044
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -357,9 +355,6 @@ MonoBehaviour:
     m_Bits: 256
   deathParticle: {fileID: 1836381337814922, guid: 02bbcb9c57edff54cbbfc0fa6b6786cf,
     type: 2}
-  ShootSound: {fileID: 0}
-  JumpSound: {fileID: 0}
-  Raccon_DeathSound: {fileID: 0}
   isTop: 0
   isBottom: 0
   isMiddle: 0

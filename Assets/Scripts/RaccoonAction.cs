@@ -25,15 +25,15 @@ public class RaccoonAction : MonoBehaviour {
     public bool isFallingDown = false;
     public bool hasGun = false;
     public bool hasCoonAbove = false;
-    public bool hasCoonBelow = false;
+    public bool hasCoonBelow = true;
     public bool isCurrentCoon = false;
     public int coonIndex;
     private Collider2D myCollider;
     public GameObject bullet;
-
+  
     private PlayerController playerController;
 
-    void Start () {
+    void Start () {       
         playerController = GameObject.Find("PlayerController").GetComponent<PlayerController>();
         myCollider = GetComponent<Collider2D>();
         myAnimator = GetComponent<Animator>();
@@ -71,8 +71,8 @@ public class RaccoonAction : MonoBehaviour {
 
     public void Jump()
     {
-        Rigidbody2D rigidbody2D = GetComponent<Rigidbody2D>();
-        rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpForce);
+        Rigidbody2D myrigidbody2D = GetComponent<Rigidbody2D>();
+        myrigidbody2D.velocity = new Vector2(myrigidbody2D.velocity.x, jumpForce);
         JumpSound.Play();
     }
 
@@ -109,14 +109,22 @@ public class RaccoonAction : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D coll)
     {
-        hasCoonBelow = coll.gameObject.CompareTag("toptrigger");
-        hasCoonAbove = coll.gameObject.CompareTag("bottrigger");
+        //hasCoonBelow = (coll.gameObject.tag == "toptrigger" && !coll.transform.IsChildOf(transform));
+        //hasCoonAbove = (coll.gameObject.tag == "bottrigger" && !coll.transform.IsChildOf(transform));
+        hasCoonBelow = (coll.gameObject.name == "TopTrigger" && !coll.transform.IsChildOf(transform));
+        hasCoonAbove = (coll.gameObject.name == "BotTrigger" && !coll.transform.IsChildOf(transform));
     }
 
     private void OnTriggerExit2D(Collider2D coll)
     {
-        hasCoonBelow = !coll.gameObject.CompareTag("toptrigger");
-        hasCoonAbove = !coll.gameObject.CompareTag("bottrigger");
+        if(coll.gameObject.name == "TopTrigger" && !coll.transform.IsChildOf(transform))
+        {
+            hasCoonBelow = false;
+        }
+        if (coll.gameObject.name == "BotTrigger" && !coll.transform.IsChildOf(transform))
+        {
+            hasCoonAbove = false;
+        }
     }
 
     public void WhenDestroy()
