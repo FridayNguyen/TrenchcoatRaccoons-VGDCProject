@@ -33,7 +33,7 @@ public class PlatformGenerator : MonoBehaviour
         {   
             //Variables
             float distanceBetweenChance = Random.Range(0, 2);
-            float floatingPlatform = Random.Range(0, 3);
+            float floatingPlatform = Random.Range(0, 5);
             int distanceBetween = 0;
 
             //One out of 2 chance will there be a hole in the floor
@@ -69,8 +69,8 @@ public class PlatformGenerator : MonoBehaviour
                 randomHeight *= 2;
                 int randomWidth = Random.Range(2, 4);
                 //50%50 chance an enenmy will spawn or a floating platform will spawn
-                int randomChance = Random.Range(0, 2);
-                if (randomChance == 1)
+                int randomChance = Random.Range(0, 3);
+                if (randomChance != 1)
                 {
                     int randomSizePlatform = Random.Range(0, 4);
                     /*//Create Spike before floating platform
@@ -106,7 +106,7 @@ public class PlatformGenerator : MonoBehaviour
                     // 50% chance a bird will spawn or 50% chance a cat will spawn
                     if (randomEnenmy == 1)
                     {
-                        Vector3 tempPosition = new Vector3(transform.position.x + (bird.GetComponent<BoxCollider2D>().size.x * 2) + randomWidth - 8, transform.position.y + randomHeight+1, transform.position.z);
+                        Vector3 tempPosition = new Vector3(transform.position.x + (bird.GetComponent<BoxCollider2D>().size.x * 2) + randomWidth - 8, transform.position.y + randomHeight+2, transform.position.z);
                         enemy = "bird";
                         theEnenmyGenerator.SpawnEnenmy(tempPosition, enemy);
                     }
