@@ -17,12 +17,17 @@ public class GameManager : MonoBehaviour {
 
     public void LoadGameOver()
     {
-        SceneManager.LoadScene("GameOver", LoadSceneMode.Additive);
+        SceneManager.LoadScene("GameOver");
+    }
+
+    public void LoadGameWon()
+    {
+        SceneManager.LoadScene("GameWon");
     }
 
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("SceneWithBullet");
     }
 
     public void Quit()

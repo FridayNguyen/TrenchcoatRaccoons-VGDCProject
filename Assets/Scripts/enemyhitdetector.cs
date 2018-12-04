@@ -13,8 +13,8 @@ public class enemyhitdetector : MonoBehaviour
         {
             Destroy(collision.gameObject);
             BulletDetected();
+            CheckWinningCondition();
         }
-
     }
 
     //This method runs when a bullet collides with this object.
@@ -24,5 +24,13 @@ public class enemyhitdetector : MonoBehaviour
         Enemy_DeathSound = GameObject.Find("Enemy_DeathSound").GetComponent<AudioSource>();
         Enemy_DeathSound.Play();
         Destroy(this.gameObject);
+    }
+
+    void CheckWinningCondition()
+    {
+        if(gameObject.name == "sun")
+        {
+            GameObject.Find("GameManager").GetComponent<GameManager>().LoadGameWon();
+        }
     }
 }
