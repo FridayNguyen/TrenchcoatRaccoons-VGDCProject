@@ -55,7 +55,8 @@ public class RaccoonAction : MonoBehaviour {
         isCurrentCoon = (playerController.selectedIndex == coonIndex);
 
         this.transform.Find("gunhand").GetComponent<Renderer>().enabled = hasGun;
-       
+        this.transform.Find("SelectIndicator").GetComponent<Renderer>().enabled = isCurrentCoon;
+
 
         myAnimator.SetBool("grounded", grounded);
         myAnimator.SetBool("isTop", isTop);
