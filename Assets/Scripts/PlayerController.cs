@@ -10,14 +10,28 @@ public class PlayerController : MonoBehaviour {
     public int selectedIndex = 0;
 
     private AudioSource SelectSound;
+    private bool raccoonSpawned;
+    private float timer;
+
 
     void Start () {
         aliveRaccoonGameObjects = InitRaccoons();
         SelectSound = GameObject.Find("SelectSound").GetComponent<AudioSource>();
+        raccoonSpawned = false;
+        timer = .1f;
 	}
 	
 	void Update () {
         ListenControls();
+        if (raccoonSpawned)
+        {
+            timer -= Time.deltaTime;
+            if(timer < 0f)
+            {
+                raccoonSpawned = false;
+                timer = .1f;
+            }
+        }
 	}
     
     private void ListenControls()
@@ -114,5 +128,22 @@ public class PlayerController : MonoBehaviour {
                 "Failed"));
 
         return aliveRaccoonGameObjects;
+    }
+    public void SpawnRaccoon()
+    {
+        if (!raccoonSpawned)
+        {
+            raccoonSpawned = true;
+            GameObject topRaccoon = aliveRaccoonGameObjects[aliveRaccoonGameObjects.Count - 1];
+            GameObject mainCamera = GameObject.Find("Main Camera");
+
+            Quaternion rotation = transform.rotation;
+            Transform parent = GameObject.Find("AllCoons-DoNotRename").transform;
+            float x = topRaccoon.transform.GetChild(0).transform.position.x;
+            float y = mainCamera.transform.position.y + mainCamera.transform.localScale.y * (0.6f);
+            Vector3 spawnPoint = new Vector3(x, y);
+
+            aliveRaccoonGameObjects.Add(Instantiate(topRaccoon, spawnPoint, rotation, parent));
+        }
     }
 }
