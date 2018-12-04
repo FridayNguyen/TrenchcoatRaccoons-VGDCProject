@@ -14,9 +14,9 @@ public class RaccoonAction : MonoBehaviour {
 
     private Animator myAnimator;
 
-    public AudioSource ShootSound;
-    public AudioSource JumpSound;
-    public AudioSource Raccon_DeathSound;
+    private AudioSource ShootSound;
+    private AudioSource JumpSound;
+    private AudioSource Raccoon_DeathSound;
 
     public bool isTop = true;
     public bool isBottom = false;
@@ -37,6 +37,10 @@ public class RaccoonAction : MonoBehaviour {
         playerController = GameObject.Find("PlayerController").GetComponent<PlayerController>();
         myCollider = GetComponent<Collider2D>();
         myAnimator = GetComponent<Animator>();
+
+        JumpSound = GameObject.Find("JumpSound").GetComponent<AudioSource>();
+        ShootSound = GameObject.Find("ShootSound").GetComponent<AudioSource>();
+        Raccoon_DeathSound = GameObject.Find("Raccoon_DeathSound").GetComponent<AudioSource>();
     }
 	
 	void Update () {
@@ -128,6 +132,6 @@ public class RaccoonAction : MonoBehaviour {
 
         if (allRaccoons.Count == 0)
             SceneManager.LoadScene("GameOver", LoadSceneMode.Additive);
-        Raccon_DeathSound.Play();
+        Raccoon_DeathSound.Play();
     }
 }

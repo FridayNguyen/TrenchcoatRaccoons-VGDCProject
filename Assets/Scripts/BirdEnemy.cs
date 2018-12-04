@@ -19,6 +19,8 @@ public class BirdEnemy : MonoBehaviour {
     public bool playerInRange;
     public LayerMask playerLayer;
 
+    private AudioSource BirdSound;
+
     Vector3 pos, localScale;
 
     // Use this for initialization
@@ -27,6 +29,7 @@ public class BirdEnemy : MonoBehaviour {
         thePlayer = FindObjectOfType<PlayerController>();
         pos = transform.position;
         localScale = transform.localScale;
+        BirdSound = GameObject.Find("BirdSound").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame

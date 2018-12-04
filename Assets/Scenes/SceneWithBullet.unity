@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 235935353}
   - component: {fileID: 235935354}
   m_Layer: 0
-  m_Name: Enemy_DamageSound
+  m_Name: Enemy_DeathSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -554,7 +554,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformDestructionPoint: {fileID: 0}
-  deathParticle: {fileID: 0}
 --- !u!1 &261367331
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,6 +585,7 @@ Transform:
   - {fileID: 127603128}
   - {fileID: 235935353}
   - {fileID: 1812771700}
+  - {fileID: 303910857}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -759,9 +759,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   deathParticle: {fileID: 0}
-  ShootSound: {fileID: 0}
-  JumpSound: {fileID: 0}
-  Raccon_DeathSound: {fileID: 0}
   isTop: 0
   isBottom: 0
   isMiddle: 0
@@ -848,6 +845,130 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &303910856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 303910857}
+  - component: {fileID: 303910858}
+  m_Layer: 0
+  m_Name: BirdSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &303910857
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 303910856}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 261367332}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &303910858
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 303910856}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 73e0c9aaf2dd5dc479942f6b5cb860d0, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &325289003
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,9 +1139,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   deathParticle: {fileID: 0}
-  ShootSound: {fileID: 0}
-  JumpSound: {fileID: 0}
-  Raccon_DeathSound: {fileID: 0}
   isTop: 0
   isBottom: 0
   isMiddle: 0
@@ -1161,7 +1279,7 @@ AudioListener:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1820,9 +1938,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   deathParticle: {fileID: 0}
-  ShootSound: {fileID: 0}
-  JumpSound: {fileID: 0}
-  Raccon_DeathSound: {fileID: 0}
   isTop: 0
   isBottom: 0
   isMiddle: 0
@@ -2083,9 +2198,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   deathParticle: {fileID: 0}
-  ShootSound: {fileID: 0}
-  JumpSound: {fileID: 0}
-  Raccon_DeathSound: {fileID: 0}
   isTop: 0
   isBottom: 0
   isMiddle: 0
@@ -2315,9 +2427,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   deathParticle: {fileID: 0}
-  ShootSound: {fileID: 0}
-  JumpSound: {fileID: 0}
-  Raccon_DeathSound: {fileID: 0}
   isTop: 0
   isBottom: 0
   isMiddle: 0
@@ -2493,7 +2602,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformDestructionPoint: {fileID: 0}
-  deathParticle: {fileID: 0}
 --- !u!1 &986229321
 GameObject:
   m_ObjectHideFlags: 0
@@ -2935,9 +3043,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   deathParticle: {fileID: 0}
-  ShootSound: {fileID: 0}
-  JumpSound: {fileID: 0}
-  Raccon_DeathSound: {fileID: 0}
   isTop: 0
   isBottom: 0
   isMiddle: 0
@@ -3260,9 +3365,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   deathParticle: {fileID: 0}
-  ShootSound: {fileID: 0}
-  JumpSound: {fileID: 0}
-  Raccon_DeathSound: {fileID: 0}
   isTop: 0
   isBottom: 0
   isMiddle: 0
@@ -3910,9 +4012,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   deathParticle: {fileID: 0}
-  ShootSound: {fileID: 0}
-  JumpSound: {fileID: 0}
-  Raccon_DeathSound: {fileID: 0}
   isTop: 0
   isBottom: 0
   isMiddle: 0
@@ -4717,9 +4816,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   deathParticle: {fileID: 0}
-  ShootSound: {fileID: 0}
-  JumpSound: {fileID: 0}
-  Raccon_DeathSound: {fileID: 0}
   isTop: 0
   isBottom: 0
   isMiddle: 0
@@ -4811,9 +4907,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b124670b873b0854bb10164e2e2ed9f4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 29411c3d3c1f7804b9f275b85950a0a2, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.405
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5066,9 +5162,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   deathParticle: {fileID: 0}
-  ShootSound: {fileID: 0}
-  JumpSound: {fileID: 0}
-  Raccon_DeathSound: {fileID: 0}
   isTop: 0
   isBottom: 0
   isMiddle: 0
@@ -5127,4 +5220,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aliveRaccoonGameObjects: []
   selectedIndex: 0
-  SelectSound: {fileID: 1812771701}

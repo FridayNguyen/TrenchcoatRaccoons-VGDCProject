@@ -9,10 +9,11 @@ public class PlayerController : MonoBehaviour {
     public List<GameObject> aliveRaccoonGameObjects = new List<GameObject>();
     public int selectedIndex = 0;
 
-    public AudioSource SelectSound;
+    private AudioSource SelectSound;
 
     void Start () {
         aliveRaccoonGameObjects = InitRaccoons();
+        SelectSound = GameObject.Find("SelectSound").GetComponent<AudioSource>();
 	}
 	
 	void Update () {
@@ -75,18 +76,16 @@ public class PlayerController : MonoBehaviour {
     {
         if (selectedIndex < aliveRaccoonGameObjects.Count - 1)
             selectedIndex++;
-
-        print("Current Index: " + selectedIndex);
         SelectSound.Play();
+        print("Current Index: " + selectedIndex);
     }
 
     public void SelectDown()
     {
         if (selectedIndex > 0)
             selectedIndex--;
-
-        print("Current Index: " + selectedIndex);
         SelectSound.Play();
+        print("Current Index: " + selectedIndex);
     }
 
     private void Select(int index)
