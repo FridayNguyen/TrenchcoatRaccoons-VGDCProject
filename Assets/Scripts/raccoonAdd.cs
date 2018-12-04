@@ -7,14 +7,8 @@ public class raccoonAdd : MonoBehaviour {
     public GameObject raccoon;
     private GameObject allCoons;
 
-	// Adds a raccoon to the index when raccoonpickup is destroyed
-	void OnDestroy()
-    {
-        print("Raccoon picked up");
-        SpawnRaccoon();
-    }
 
-    private void SpawnRaccoon()
+    public void SpawnRaccoon()
     {
         PlayerController playerController = GameObject.Find("PlayerController").GetComponent<PlayerController>();
         List<GameObject> allRaccoons = playerController.aliveRaccoonGameObjects;
@@ -25,5 +19,7 @@ public class raccoonAdd : MonoBehaviour {
         Vector3 spawnPoint = topRaccoon.transform.GetChild(0).transform.position;
 
         allRaccoons.Add(Instantiate(raccoon, spawnPoint, rotation, parent));
+
+        Destroy(gameObject);
     }
 }

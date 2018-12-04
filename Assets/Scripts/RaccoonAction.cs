@@ -32,6 +32,7 @@ public class RaccoonAction : MonoBehaviour {
     public GameObject bullet;
   
     private PlayerController playerController;
+    private bool racpickedup = false;
 
     void Start () {       
         playerController = GameObject.Find("PlayerController").GetComponent<PlayerController>();
@@ -99,6 +100,11 @@ public class RaccoonAction : MonoBehaviour {
         {
             hasCoonAbove = true;
         }
+        if (coll.gameObject.tag == "raccoonpickup" && !racpickedup)
+        {
+            coll.GetComponent<raccoonAdd>().SpawnRaccoon();
+            racpickedup = true;
+        }
         switch (coll.gameObject.tag)
         {
             case "enemy":
@@ -110,10 +116,6 @@ public class RaccoonAction : MonoBehaviour {
                 Destroy(coll.gameObject);
                 hasGun = true;
                 break;
-
-            case "raccoonpickup":
-                Destroy(coll.gameObject);
-                break;
         }
     }
 
@@ -124,7 +126,11 @@ public class RaccoonAction : MonoBehaviour {
 
     private void OnTriggerExit2D(Collider2D coll)
     {
-        if(coll.gameObject.name == "TopTrigger" && !coll.transform.IsChildOf(transform))
+        if (racpickedup)
+        {
+            racpickedup = false;
+        }
+        if (coll.gameObject.name == "TopTrigger" && !coll.transform.IsChildOf(transform))
         {
             hasCoonBelow = false;
         }
