@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
 
     public List<GameObject> aliveRaccoonGameObjects = new List<GameObject>();
     public int selectedIndex = 0;
+    public GameObject raccoon;
 
     private AudioSource SelectSound;
     private bool raccoonSpawned;
@@ -143,7 +144,7 @@ public class PlayerController : MonoBehaviour {
             float y = mainCamera.transform.position.y + mainCamera.transform.localScale.y * (0.6f);
             Vector3 spawnPoint = new Vector3(x, y);
 
-            aliveRaccoonGameObjects.Add(Instantiate(topRaccoon, spawnPoint, rotation, parent));
+            aliveRaccoonGameObjects.Add(Instantiate(raccoon, spawnPoint, rotation, parent));
         }
     }
 }

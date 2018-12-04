@@ -5390,3 +5390,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aliveRaccoonGameObjects: []
   selectedIndex: 0
+  raccoon: {fileID: 1705219219655714, guid: 562d1c3b851886148944e751b1cdbb41, type: 2}
