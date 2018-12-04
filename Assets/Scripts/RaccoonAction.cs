@@ -90,7 +90,15 @@ public class RaccoonAction : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D coll)
     {
-        switch(coll.gameObject.tag)
+        if (coll.gameObject.tag == "toptrigger" && !coll.transform.IsChildOf(transform))
+        {
+            hasCoonBelow = true;
+        }
+        if (coll.gameObject.tag == "bottrigger" && !coll.transform.IsChildOf(transform))
+        {
+            hasCoonAbove = true;
+        }
+        switch (coll.gameObject.tag)
         {
             case "enemy":
                 WhenDestroy();
@@ -110,10 +118,7 @@ public class RaccoonAction : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D coll)
     {
-        //hasCoonBelow = (coll.gameObject.tag == "toptrigger" && !coll.transform.IsChildOf(transform));
-        //hasCoonAbove = (coll.gameObject.tag == "bottrigger" && !coll.transform.IsChildOf(transform));
-        hasCoonBelow = (coll.gameObject.name == "TopTrigger" && !coll.transform.IsChildOf(transform));
-        hasCoonAbove = (coll.gameObject.name == "BotTrigger" && !coll.transform.IsChildOf(transform));
+        
     }
 
     private void OnTriggerExit2D(Collider2D coll)
@@ -124,7 +129,7 @@ public class RaccoonAction : MonoBehaviour {
         }
         if (coll.gameObject.name == "BotTrigger" && !coll.transform.IsChildOf(transform))
         {
-            hasCoonAbove = false;
+           hasCoonAbove = false;
         }
     }
 

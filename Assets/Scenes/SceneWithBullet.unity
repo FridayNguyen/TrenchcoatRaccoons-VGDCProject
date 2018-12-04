@@ -4726,7 +4726,7 @@ Prefab:
     - target: {fileID: 114242553611780044, guid: 562d1c3b851886148944e751b1cdbb41,
         type: 2}
       propertyPath: hasCoonBelow
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 562d1c3b851886148944e751b1cdbb41, type: 2}
