@@ -96,14 +96,10 @@ public class PlatformGenerator : MonoBehaviour
                         //Pick up spawning
                         newTempPosition.y += 1;
                         //random pick up
-                        int randomPickUp = Random.Range(0, 4);
+                        int randomPickUp = Random.Range(0, 2);
                         if (randomPickUp == 1)
                         {
                             Instantiate(gunPickUp, newTempPosition, transform.rotation);
-                        }
-                        if (randomPickUp != 1)
-                        {
-                            Instantiate(raccoonPickUp, newTempPosition, transform.rotation);
                         }
                     }
                 }
