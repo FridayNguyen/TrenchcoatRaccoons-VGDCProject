@@ -9,16 +9,16 @@
   - Gameplay Design.
   - Art and Animations.
   - Mechanic Implementations.
-- **Andrew [Last Name]:**
+- **Andrew Nguyen:**
   - Place holder.
   - Place holder.
-- **Shon/Shane/Shaun [Last Name]:**
+- **Sean Chang:**
   - Place holder.
   - Place holder.
-- **Williams [Last Name]:**
+- **Williams Jeon:**
   - Place holder.
   - Place holder.
-- **Sandra [Last Name]:**
+- **Sandra Soto:**
   - Place holder.
   - Place holder.
 
