@@ -16,8 +16,9 @@
   - Place holder.
   - Place holder.
 - **Williams Jeon:**
-  - Place holder.
-  - Place holder.
+  - Gameplay Design
+  - Hit Detection
+  - Designated Bug Fixer
 - **Sandra Soto:**
   - Place holder.
   - Place holder.
