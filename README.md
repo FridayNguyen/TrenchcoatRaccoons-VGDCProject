@@ -10,8 +10,8 @@
   - Art and Animations.
   - Mechanic Implementations.
 - **Andrew Nguyen:**
-  - Place holder.
-  - Place holder.
+  - Programmed: EnemyAi, Platform|Enemy|PickUps Generation/Desctruction.
+  - MainMenu/Credits/Controls Pages.
 - **Sean Chang:**
   - Place holder.
   - Place holder.
