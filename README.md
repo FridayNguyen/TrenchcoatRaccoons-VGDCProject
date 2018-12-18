@@ -20,7 +20,7 @@
   - Hit Detection
   - Designated Bug Fixer
 - **Sandra Soto:**
-  - Place holder.
-  - Place holder.
+  - Sound FX.
+  - Background Music.
 
 ---
