@@ -13,8 +13,8 @@
   - Programmed: EnemyAi, Platform|Enemy|PickUps Generation/Desctruction.
   - MainMenu/Credits/Controls Pages.
 - **Sean Chang:**
-  - Place holder.
-  - Place holder.
+  - Game Character Mechanics, Selector, and Main Menu Arts
+  - Game Over scene and Game Won scene
 - **Williams Jeon:**
   - Gameplay Design
   - Hit Detection
