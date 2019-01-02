@@ -54,7 +54,7 @@ public class PlatformGenerator : MonoBehaviour
                 Instantiate(thePlatform, transform.position, transform.rotation);
             }
 
-            Vector3 pickUpPosition = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
+            Vector3 pickUpPosition = new Vector3(transform.position.x + 2, transform.position.y + 1, transform.position.z);
             //Spawning pickups on main platform
             //Pick up spawning
             //random pick up
